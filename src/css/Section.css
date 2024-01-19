@@ -1,0 +1,31 @@
+#section1,
+#section2,
+#section3,
+#section4 {
+  width: calc(100vh-30rem);
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  margin: 0 15rem;
+}
+
+.s-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100vh - 100vh * 0.075);
+  margin-top: calc(100vh * 0.075);
+}
+
+#section1 .s-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.photo {
+  background-color: blanchedalmond;
+}
+
+.introduce {
+  background-color: white;
+}

@@ -1,0 +1,38 @@
+#navbar {
+  width: 100vw;
+  height: calc(100vh * 0.075);
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  display: block;
+}
+
+.content {
+  width: calc(100% - 30rem); /* 여백이 없도록 설정 */
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 15rem;
+}
+
+#navbar a {
+  color: #615d5d;
+  font-weight: bold;
+  font-size: 24px;
+  margin: auto;
+  text-decoration-line: none;
+}
+
+#navbar a:hover {
+  text-decoration-line: underline;
+  color: black;
+}
+
+/* 화면 크기가 768px 이하일 때 스타일 조정 */
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    margin: 0; /* 작은 화면에서는 좀 더 좁게 조정 */
+  }
+}
