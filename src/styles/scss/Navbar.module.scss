@@ -1,12 +1,12 @@
 #navbar {
   width: 100vw;
-  height: calc(100vh * 0.07 - 10px);
+  height: calc(100vh * 0.075);
   // background-color: rgb(34, 35, 36);
   background-color: rgb(197, 218, 240);
 
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   display: block;
 }
 

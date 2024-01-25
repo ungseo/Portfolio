@@ -1,9 +1,9 @@
 .container {
   perspective: 1980px;
   perspective-origin: 50% 0px;
-  width: 90%;
+  width: 80%;
   height: 75%;
-  margin: 2rem auto;
+  margin: 2rem 14% 0;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   color: #fff;
@@ -14,10 +14,10 @@
   }
   .tab {
     position: absolute;
-    width: 9%;
-    height: 50%;
+    width: 10%;
+    height: 29%;
     background: pink;
-    right: -50px;
+    right: 0;
     line-height: 70px;
     font-weight: 300;
     z-index: 20;
@@ -27,21 +27,25 @@
       background: #06d6a0;
     }
     &:nth-child(2) {
-      top: 45%;
+      top: 30%;
       background: #1b9aaa;
     }
     &:nth-child(3) {
-      top: 66%;
+      top: 60%;
       background: #ef476f;
+    }
+    &:nth-child(4) {
+      top: 90%;
+      background: #7e5b63;
     }
   }
 
   .cube {
     position: absolute;
     margin: auto;
-    width: 100%;
+    width: 90%;
     height: 100%;
-    transform-origin: 50% 50%;
+    transform-origin: 0% 50%;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in;
     z-index: 10;
@@ -49,6 +53,7 @@
       width: 90%;
       height: 100%;
       position: absolute;
+
       h1 {
         font-size: 2rem;
         margin: 75px 0 10px;
@@ -58,7 +63,7 @@
         font-size: 12px;
       }
       &:nth-child(2) {
-        transform: translateZ(255px);
+        transform: translateZ(318px);
         background: #1b9aaa;
       }
       &:nth-child(1) {
@@ -70,6 +75,11 @@
         transform: rotateX(-90deg) translateY(50%);
         transform-origin: bottom center;
         background: #ef476f;
+      }
+      &:nth-child(4) {
+        transform: rotateX(180deg) translateY(100%) translateZ(318px);
+        transform-origin: bottom center;
+        background: #754c56;
       }
     }
   }
@@ -85,4 +95,7 @@
 
 #tabbottom:checked ~ .cube {
   transform: rotateX(90deg);
+}
+#tablast:checked ~ .cube {
+  transform: rotateX(-180deg);
 }

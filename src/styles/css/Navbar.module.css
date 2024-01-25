@@ -1,11 +1,11 @@
 @charset "UTF-8";
 #navbar {
   width: 100vw;
-  height: calc(7vh - 10px);
+  height: 7.5vh;
   background-color: rgb(197, 218, 240);
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   display: block;
 }
 
