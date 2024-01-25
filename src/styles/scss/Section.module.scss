@@ -1,0 +1,50 @@
+#section1,
+#section2,
+#section3,
+#section4 {
+  width: auto;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  margin: 0 15rem;
+}
+#section1 {
+  background-color: transparent;
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100vh - 100vh * 0.075);
+    margin-top: calc(100vh * 0.075);
+    .profile {
+      position: relative;
+      margin: 5rem 0;
+      border-radius: 5rem;
+      background-color: blue;
+    }
+    .photoWrapper {
+      background-color: red;
+      margin: 5rem 0;
+      border-radius: 5rem;
+      // background-image: url("/public/stand.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+// Add your media query here if needed
+// @media (max-width: 768px) {
+//   #section1,
+//   #section2,
+//   #section3,
+//   #section4 {
+//     width: 100%;
+//     margin: 0;
+//     background-color: red;
+//   }
+// }

@@ -1,15 +1,18 @@
-import React from "react";
-import "./css/Section.css";
+import React, { forwardRef } from "react";
+import style from "./styles/css/Section.module.css";
+import Info3DCpnt from "./Info3DCpnt";
 
-const Section1 = () => {
+const Section1 = forwardRef((props, ref) => {
   return (
-    <div id="section1">
-      <div className="s-content">
-        <div className="photo"></div>
-        <div className="introduce"></div>
+    <div id={style.section1} ref={ref}>
+      <div className={style.content}>
+        <div className={style.profile}>
+          <Info3DCpnt />
+        </div>
+        <div className={style.photoWrapper}></div>
       </div>
     </div>
   );
-};
+});
 
 export default Section1;

@@ -10,9 +10,9 @@ const Background = ({ endAnimation, setEndAnimation }) => {
       return;
     }
 
-    const multiplier = 40000;
+    const multiplier = 200000;
     const begin = 0.4;
-    const duration = 0.6;
+    const duration = 2.5;
 
     function h2r(p, q, t) {
       if (t < 0) t += 1;
@@ -77,9 +77,9 @@ const Background = ({ endAnimation, setEndAnimation }) => {
         name: "aPositionEnd",
         data: (index, total) => {
           const angle = index * ((2 * Math.PI) / total);
-          return [Math.cos(angle) + getRandom(1.2), 0.85, 0];
+          return [Math.cos(angle) + getRandom(1.2), 0.87, 0];
         },
-        size: 3,
+        size: 2,
       },
 
       {
@@ -87,15 +87,15 @@ const Background = ({ endAnimation, setEndAnimation }) => {
         data: (index, total) =>
           getHSL(
             begin + (index / total) * 0.2,
-            0.6 + getRandom(0.2),
-            0.6 + getRandom(0.2)
+            0.6 + getRandom(0.1),
+            0.6 + getRandom(0.1)
           ),
         size: 3,
       },
 
       {
         name: "aOffset",
-        data: (i) => [i * ((1 - duration) / (multiplier - 1))],
+        data: (i) => [i * ((10 - duration) / (multiplier - 1))],
         size: 1,
       },
     ];
@@ -130,7 +130,7 @@ const Background = ({ endAnimation, setEndAnimation }) => {
       void main(){
         float tProgress = min(1.0, max(0.0, (uProgress - aOffset)) / ${duration});
         vec3 newPosition = bezier4(aPositionStart, aControlPointOne, aControlPointTwo, aPositionEnd, tProgress);
-        gl_PointSize = 5.0; 
+        gl_PointSize = 3.0; 
         gl_Position = uProjectionMatrix * uModelMatrix * uViewMatrix * vec4(newPosition + aPosition, 1);
         vColor = aColor;
 
@@ -164,8 +164,8 @@ const Background = ({ endAnimation, setEndAnimation }) => {
       fragment,
       onRender: (instance) => {
         // Increment the progress
-        instance.uniforms.uProgress.value += 0.004;
-        if (instance.uniforms.uProgress.value >= 1.03) {
+        instance.uniforms.uProgress.value += 0.04;
+        if (instance.uniforms.uProgress.value >= 12) {
           setEndAnimation(true);
           renderer.destroy();
         }
@@ -191,7 +191,7 @@ const Background = ({ endAnimation, setEndAnimation }) => {
         height: `min(${screenHeight}px)`,
         imageRendering: "pixelated",
         overflow: "hidden",
-        zIndex: "999",
+        zIndex: `${endAnimation ? "0" : "999"}`,
       }}
     />
   );

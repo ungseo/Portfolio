@@ -1,0 +1,87 @@
+.container {
+  perspective: 1980px;
+  perspective-origin: 50% 0px;
+  width: 90%;
+  height: 75%;
+  margin: 2rem auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+}
+.container input {
+  display: none;
+}
+.container .tab {
+  position: absolute;
+  width: 9%;
+  height: 50%;
+  background: pink;
+  right: -50px;
+  line-height: 70px;
+  font-weight: 300;
+  z-index: 20;
+}
+.container .tab:nth-child(1) {
+  top: 0;
+  background: #06d6a0;
+}
+.container .tab:nth-child(2) {
+  top: 45%;
+  background: #1b9aaa;
+}
+.container .tab:nth-child(3) {
+  top: 66%;
+  background: #ef476f;
+}
+.container .cube {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in;
+  z-index: 10;
+}
+.container .cube .content {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+}
+.container .cube .content h1 {
+  font-size: 2rem;
+  margin: 75px 0 10px;
+  font-weight: 300;
+}
+.container .cube .content p {
+  font-size: 12px;
+}
+.container .cube .content:nth-child(2) {
+  transform: translateZ(255px);
+  background: #1b9aaa;
+}
+.container .cube .content:nth-child(1) {
+  transform: rotateX(-270deg) translateY(-50%);
+  transform-origin: top left;
+  background: #06d6a0;
+}
+.container .cube .content:nth-child(3) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+  background: #ef476f;
+}
+
+#tabtop:checked ~ .cube {
+  transform: rotateX(-90deg);
+}
+
+#tabfront:checked ~ .cube {
+  transform: rotateX(0deg);
+}
+
+#tabbottom:checked ~ .cube {
+  transform: rotateX(90deg);
+}
+
+/*# sourceMappingURL=Info3DCpnt.module.css.map */

@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  max-width: 100vw;
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+  background-color: rgb(197, 218, 240);
+}
+
+/*# sourceMappingURL=App.module.css.map */
