@@ -1,44 +1,63 @@
+@import "Styles";
+
 #navbar {
   width: 100vw;
   height: calc(100vh * 0.075);
-  // background-color: rgb(34, 35, 36);
-  background-color: rgb(197, 218, 240);
-
+  background-color: $BGC;
   position: fixed;
   top: 0;
   z-index: 999;
   display: block;
-}
-
-.content {
-  width: calc(100% - 30rem); /* 여백이 없도록 설정 */
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 0 15rem;
-}
-
-#navbar a {
-  position: relative;
-  color: #615d5d;
-  font-weight: bold;
-  font-size: 24px;
-  margin: auto;
-  text-decoration: none;
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 100%;
-    height: 5px;
-    border-radius: 2px;
-    background-color: #fff;
-    transition: right 0.3s ease; /* 오른쪽으로 이동하는 애니메이션 속성 추가 */
+  .content {
+    width: calc(100% - 30rem); /* 여백이 없도록 설정 */
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 15rem;
   }
+  a {
+    position: relative;
+    color: #615d5d;
+    font-weight: bold;
+    font-size: 24px;
+    margin: auto;
+    text-decoration: none;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 100%;
+      height: 5px;
+      border-radius: 3px;
+      background-color: white;
+      transition: right 0.3s ease; /* 오른쪽으로 이동하는 애니메이션 속성 추가 */
+    }
 
-  &:hover::before {
+    &:hover::before {
+      right: 0;
+      border: solid 1px rgb(209, 207, 207);
+    }
+  }
+  .cur {
+    color: #3f68ee;
+    position: relative;
     right: 0;
+
+    // text-decoration: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      border-radius: 3px;
+      background-color: white;
+      transition: right 0.3s ease;
+      border: solid 1px rgb(209, 207, 207);
+    }
   }
 }
 

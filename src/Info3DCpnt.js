@@ -13,13 +13,16 @@ const Info3DCpnt = () => {
       <label className={style.tab} htmlFor={style.tabbottom}>
         BOTTOM
       </label>
-      <input type="radio" name="tabs" id={style.tabtop} />
+      <label className={style.tab} htmlFor={style.tablast}>
+        LAST
+      </label>
+      <input type="radio" name="tabs" id={style.tabtop} defaultChecked />
       <input type="radio" name="tabs" id={style.tabfront} />
       <input type="radio" name="tabs" id={style.tabbottom} />
+      <input type="radio" name="tabs" id={style.tablast} />
       <div className={style.cube}>
         <div className={style.content}>
-          <h1>TOP CONTENT</h1>
-          <p>THIS IS AWESOME</p>
+          <div className={style.photo}></div>
         </div>
         <div className={style.content}>
           <h1>FRONT CONTENT</h1>
@@ -28,6 +31,10 @@ const Info3DCpnt = () => {
         <div className={style.content}>
           <h1>BOTTOM CONTENT</h1>
           <p>THIS IS SWEET</p>
+        </div>
+        <div className={style.content}>
+          <h1>LAST CONTENT</h1>
+          <p>THIS IS FUCK</p>
         </div>
       </div>
     </div>

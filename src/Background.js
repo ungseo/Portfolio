@@ -1,10 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import Phenomenon from "phenomenon";
 
 const Background = ({ endAnimation, setEndAnimation }) => {
   const canvasRef = useRef(null);
-  const screenWidth = window.screen.width;
-  const screenHeight = window.screen.height;
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+  const handleEndAnimation = useCallback(() => {
+    setEndAnimation(true);
+  }, [setEndAnimation]);
+
   useEffect(() => {
     if (endAnimation) {
       return;
@@ -77,7 +81,7 @@ const Background = ({ endAnimation, setEndAnimation }) => {
         name: "aPositionEnd",
         data: (index, total) => {
           const angle = index * ((2 * Math.PI) / total);
-          return [Math.cos(angle) + getRandom(1.2), 0.87, 0];
+          return [Math.cos(angle) + getRandom(1.2), 0.85, 0];
         },
         size: 2,
       },
@@ -87,8 +91,8 @@ const Background = ({ endAnimation, setEndAnimation }) => {
         data: (index, total) =>
           getHSL(
             begin + (index / total) * 0.2,
-            0.6 + getRandom(0.1),
-            0.6 + getRandom(0.1)
+            0.9 + getRandom(0.1),
+            0.9 + getRandom(0.1)
           ),
         size: 3,
       },
@@ -169,16 +173,13 @@ const Background = ({ endAnimation, setEndAnimation }) => {
           setEndAnimation(true);
           renderer.destroy();
         }
-
-        // Add a condition to reset the animation at the halfway point
       },
     });
 
     return () => {
-      // Clean up the Phenomenon instance when the component unmounts
       renderer.destroy();
     };
-  }, [endAnimation]); // Empty dependency array ensures this effect runs once on mount
+  }, [endAnimation, handleEndAnimation]);
 
   return (
     <canvas
@@ -191,7 +192,8 @@ const Background = ({ endAnimation, setEndAnimation }) => {
         height: `min(${screenHeight}px)`,
         imageRendering: "pixelated",
         overflow: "hidden",
-        zIndex: `${endAnimation ? "0" : "999"}`,
+        zIndex: `999`,
+        pointerEvents: "none",
       }}
     />
   );
