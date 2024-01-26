@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes Upstream {
   0% {
     opacity: 0;
@@ -71,16 +72,15 @@
   height: 100vh;
   position: relative;
   z-index: 1;
-  margin: 0 15rem;
+  margin: 0 20rem;
 }
 
 #section1 {
   background-color: transparent;
 }
-#section1 .content {
+#section1 .contentWrapper {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
+  grid-template-rows: 1fr 12fr;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -88,20 +88,86 @@
   height: 92.5vh;
   margin-top: 7.5vh;
 }
-#section1 .content .profile {
+#section1 .contentWrapper .content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+#section1 .contentWrapper .content .profile {
+  padding: 5rem;
   position: relative;
-  margin: 5rem 0;
+  margin: 3rem 0;
   border-radius: 5rem;
-  background-color: blue;
+  background-color: white;
   animation: HalfUp ease-in-out 0.3s;
 }
-#section1 .content .photoWrapper {
-  background-color: red;
-  margin: 5rem 0;
+#section1 .contentWrapper .content .photoWrapper {
+  position: relative;
+  background-color: rgba(207, 205, 205, 0.171);
+  margin: 3rem 0;
+  border-radius: 5rem;
+  border: rebeccapurple solid 1px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.1s ease-out;
+  animation: HalfUp ease-in-out 0.5s;
+  box-shadow: 0 0 0.5rem black;
+}
+#section1 .contentWrapper .content .photoWrapper .icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(/public/profile.png);
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#section1 .contentWrapper .content .photoWrapper .photo {
+  width: 100%;
+  height: 100%;
   border-radius: 5rem;
   background-size: cover;
   background-position: center;
-  animation: HalfUp ease-in-out 0.5s;
+  background-image: url("/public/stand-removebg-preview.png");
+  transform: scale(0); /* Fix: use transform instead of scale */
+  transition: transform 0.2s ease-in-out;
+}
+#section1 .contentWrapper .content .photoWrapper:hover {
+  border: none;
+  background-color: transparent;
+}
+#section1 .contentWrapper .content .photoWrapper:hover .photo {
+  transform: scale(1); /* :hover 상태에서 크기를 1로 돌리기 */
+}
+#section1 .contentWrapper .content .photoWrapper:hover .icon {
+  display: none;
+}
+
+#section4 .content {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  gap: 50px;
+  width: 100%;
+  height: 92.5vh;
+  background-color: red;
+  margin-top: 7.5vh;
+}
+
+.none {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #section1,
+  #section2,
+  #section3,
+  #section4 {
+    width: 100%;
+    margin: 0;
+    background-color: red;
+  }
 }
 
 /*# sourceMappingURL=Section.module.css.map */

@@ -7,7 +7,7 @@ import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
-import { getOffsetTop } from "./uitls/utils";
+import Background2 from "./Background2";
 
 function App() {
   const screenWidth = window.screen.width;
@@ -20,7 +20,6 @@ function App() {
   const section2Ref = useRef();
   const section3Ref = useRef();
   const section4Ref = useRef();
-
   console.log(`화면의 너비: ${screenWidth}px`);
   console.log(`화면의 높이: ${screenHeight}px`);
 
@@ -63,11 +62,12 @@ function App() {
         setEndAnimations={setEndAnimation}
         sectionTops={sectionTops}
       />
-      <Section1 ref={section1Ref} />
+      <Section1 ref={section1Ref} endAnimation={endAnimation} />
       <Section2 ref={section2Ref} />
       <Section3 ref={section3Ref} />
       <Section4 ref={section4Ref} />
 
+      <Background2 endAnimation={endAnimation} />
       <Background
         endAnimation={endAnimation}
         setEndAnimation={setEndAnimation}

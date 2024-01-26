@@ -21,7 +21,8 @@
     line-height: 70px;
     font-weight: 300;
     z-index: 20;
-
+    border-radius: 5rem;
+    border: 1px solid black;
     &:nth-child(1) {
       top: 0;
       background: #06d6a0;
@@ -54,6 +55,8 @@
       height: 100%;
       position: absolute;
 
+      border-radius: 3rem;
+
       h1 {
         font-size: 2rem;
         margin: 75px 0 10px;
@@ -64,22 +67,22 @@
       }
       &:nth-child(2) {
         transform: translateZ(318px);
-        background: #1b9aaa;
+        background-color: #fff;
       }
       &:nth-child(1) {
         transform: rotateX(-270deg) translateY(-50%);
         transform-origin: top left;
-        background: #06d6a0;
+        background-color: #ebf5fd;
       }
       &:nth-child(3) {
         transform: rotateX(-90deg) translateY(50%);
         transform-origin: bottom center;
-        background: #ef476f;
+        background-color: #b0c7f8;
       }
       &:nth-child(4) {
         transform: rotateX(180deg) translateY(100%) translateZ(318px);
         transform-origin: bottom center;
-        background: #754c56;
+        background-color: #6aa2c7;
       }
     }
   }
@@ -97,5 +100,5 @@
   transform: rotateX(90deg);
 }
 #tablast:checked ~ .cube {
-  transform: rotateX(-180deg);
+  transform: rotateX(180deg);
 }
