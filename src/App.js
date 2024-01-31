@@ -38,6 +38,7 @@ function App() {
         if (prev.every((value, index) => value === offsets[index])) {
           return prev;
         } else {
+          console.log(offsets);
           return offsets;
         }
       });

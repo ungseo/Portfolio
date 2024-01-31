@@ -26,7 +26,7 @@
 #navbar a::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   right: 100%;
   height: 5px;
@@ -36,7 +36,6 @@
 }
 #navbar a:hover::before {
   right: 0;
-  border: solid 1px rgb(209, 207, 207);
 }
 #navbar .cur {
   color: #3f68ee;
@@ -46,14 +45,13 @@
 #navbar .cur::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 5px;
   border-radius: 3px;
   background-color: white;
   transition: right 0.3s ease;
-  border: solid 1px rgb(209, 207, 207);
 }
 
 /* 화면 크기가 768px 이하일 때 스타일 조정 */

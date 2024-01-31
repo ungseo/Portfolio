@@ -68,7 +68,6 @@
 #section2,
 #section3,
 #section4 {
-  width: auto;
   height: 100vh;
   position: relative;
   z-index: 1;
@@ -76,35 +75,42 @@
 }
 
 #section1 {
+  width: auto;
+  height: 100vh;
   background-color: transparent;
+  width: calc(100vw - 40rem);
 }
 #section1 .contentWrapper {
-  display: grid;
-  grid-template-rows: 1fr 12fr;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  width: 100%;
   height: 92.5vh;
-  margin-top: 7.5vh;
+  padding-top: 7.5vh;
 }
 #section1 .contentWrapper .content {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  width: 100%;
+  height: 100%;
   gap: 2rem;
 }
 #section1 .contentWrapper .content .profile {
-  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 100%;
+  min-width: 100%;
   position: relative;
-  margin: 3rem 0;
   border-radius: 5rem;
-  background-color: white;
+  background-color: transparent;
+  border: rebeccapurple solid 1px;
+  box-shadow: 0 0 0.5rem black;
   animation: HalfUp ease-in-out 0.3s;
+  height: 80%;
+  margin: auto;
 }
 #section1 .contentWrapper .content .photoWrapper {
+  width: 100%;
+  height: 80%;
   position: relative;
   background-color: rgba(207, 205, 205, 0.171);
-  margin: 3rem 0;
   border-radius: 5rem;
   border: rebeccapurple solid 1px;
   overflow: hidden;
@@ -112,6 +118,7 @@
   transition: transform 0.1s ease-out;
   animation: HalfUp ease-in-out 0.5s;
   box-shadow: 0 0 0.5rem black;
+  margin: auto 0;
 }
 #section1 .contentWrapper .content .photoWrapper .icon {
   width: 50px;
@@ -144,15 +151,44 @@
   display: none;
 }
 
-#section4 .content {
-  position: absolute;
-  display: grid;
-  grid-template-rows: 1fr 10fr;
-  gap: 50px;
+#section2 {
+  height: auto;
+}
+#section2 .contentWrapper {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 7.5vh;
+}
+#section2 .contentWrapper .skillWrapper {
+  height: auto;
+  width: 100%;
+}
+#section2 .contentWrapper .skillWrapper .skills {
+  border: 1px solid black;
+  border-radius: 5rem;
+  box-sizing: content-box;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 2rem;
+}
+
+#section3 {
+  position: relative;
+}
+#section3 .contentWrapper {
   height: 92.5vh;
-  background-color: red;
-  margin-top: 7.5vh;
+  padding-top: 7.5vh;
+}
+
+#section4 {
+  position: relative;
+}
+#section4 .contentWrapper {
+  height: 92.5vh;
+  padding-top: 7.5vh;
 }
 
 .none {
@@ -166,7 +202,10 @@
   #section4 {
     width: 100%;
     margin: 0;
-    background-color: red;
+  }
+  #section1 {
+    height: 92.5vh;
+    margin-top: 7.5vh;
   }
 }
 

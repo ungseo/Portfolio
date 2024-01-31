@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { forwardRef, useState } from "react";
 import style from "./styles/css/Section.module.css";
 
 const Section1 = forwardRef(({ endAnimation }, ref) => {
@@ -16,7 +16,6 @@ const Section1 = forwardRef(({ endAnimation }, ref) => {
   return (
     <div id={style.section1} ref={ref} onMouseMove={handleMouseMove}>
       <div className={style.contentWrapper}>
-        <h1>Hi</h1>
         <div className={style.content}>
           <div
             className={`${endAnimation ? style.profile : style.none}`}
@@ -24,7 +23,14 @@ const Section1 = forwardRef(({ endAnimation }, ref) => {
               transform: `rotateX(${tilt.tiltY}deg) rotateY(${tilt.tiltX}deg)`,
             }}
           >
-            <h1>hi</h1>
+            <div>
+              <h1>끊임없이 흡수하는, </h1>
+              <h1>오늘보다 내일이 더 기대되는 개발자 김웅서 입니다.</h1>
+            </div>
+            <h1>안녕하세요</h1>
+            <h1>안녕하세요</h1>
+            <h1>안녕하세요</h1>
+            <h1>안녕하세요</h1>
           </div>
           <div
             className={`${endAnimation ? style.photoWrapper : ""}`}

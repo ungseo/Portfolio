@@ -2,14 +2,11 @@ import { useState, useEffect } from "react";
 import style from "../styles/css/Navbar.module.css";
 import { goToSection } from "../uitls/utils";
 
-const Navbar = ({ endAnimation, setEndAnimations, sectionTops }) => {
+const Navbar = ({ endAnimation, sectionTops }) => {
   const [currentTab, setCurrentTab] = useState(["", "", "", ""]);
   useEffect(() => {
-    console.log("hi");
     const handleScroll = () => {
       for (let i = 0; i < 4; i++) {
-        console.log(sectionTops[i], sectionTops[i + 1], window.scrollY);
-
         setCurrentTab((prev) => {
           const newTabs = [...prev]; // 새로운 배열을 생성
           if (
@@ -32,7 +29,6 @@ const Navbar = ({ endAnimation, setEndAnimations, sectionTops }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [window.scrollY]);
-  console.log("tab", currentTab);
   return (
     <div
       id={style.navbar}
