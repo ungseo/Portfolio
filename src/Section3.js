@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import "./css/Section.css";
-import Info3DCpnt from "./Info3DCpnt";
+import Info3DCpnt from "./components/Info3DCpnt";
 
 const Section3 = forwardRef((props, ref) => {
   return (

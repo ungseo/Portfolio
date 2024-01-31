@@ -1,12 +1,7 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import style from "./styles/css/Section.module.css";
 
-const Section1 = forwardRef((props, ref) => {
-  const [endAnimation, setEndAnimation] = useState(false);
-  useEffect(() => {
-    setEndAnimation(props.endAnimation);
-  }, [props.endAnimation]);
-  console.log(endAnimation);
+const Section1 = forwardRef(({ endAnimation }, ref) => {
   const [tilt, setTilt] = useState({ tiltX: 0, tiltY: 0 });
 
   const handleMouseMove = (e) => {

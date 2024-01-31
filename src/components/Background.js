@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef } from "react";
 import Phenomenon from "phenomenon";
 
 const Background = ({ endAnimation, setEndAnimation }) => {
   const canvasRef = useRef(null);
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
-  const handleEndAnimation = useCallback(() => {
-    setEndAnimation(true);
-  }, [setEndAnimation]);
+  // const handleEndAnimation = useCallback(() => {
+  //   setEndAnimation(true);
+  // }, [setEndAnimation]);
 
   useEffect(() => {
     if (endAnimation) {
@@ -179,7 +179,7 @@ const Background = ({ endAnimation, setEndAnimation }) => {
     return () => {
       renderer.destroy();
     };
-  }, [endAnimation, handleEndAnimation]);
+  }, [endAnimation, setEndAnimation]);
 
   return (
     <canvas

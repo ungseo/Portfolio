@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import style from "./styles/css/Navbar.module.css";
-import { goToSection } from "./uitls/utils";
+import style from "../styles/css/Navbar.module.css";
+import { goToSection } from "../uitls/utils";
 
 const Navbar = ({ endAnimation, setEndAnimations, sectionTops }) => {
   const [currentTab, setCurrentTab] = useState(["", "", "", ""]);
@@ -18,7 +18,7 @@ const Navbar = ({ endAnimation, setEndAnimations, sectionTops }) => {
             i <= 2
           ) {
             newTabs[i] = style.cur;
-          } else if (i == 3 && window.scrollY >= sectionTops[3]) {
+          } else if (i === 3 && window.scrollY >= sectionTops[3]) {
             newTabs[i] = style.cur;
           } else {
             newTabs[i] = "";

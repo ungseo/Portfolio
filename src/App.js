@@ -1,13 +1,13 @@
 import { useEffect, useState, useRef } from "react";
 import "./css/App.css";
 import style from "./styles/css/App.module.css";
-import Background from "./Background";
-import Navbar from "./Navbar";
+import Background from "./components/Background";
+import Background2 from "./components/Background2";
+import Navbar from "./components/Navbar";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
-import Background2 from "./Background2";
 
 function App() {
   const screenWidth = window.screen.width;
