@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import style from "../styles/css/Navbar.module.css";
-import { goToSection } from "../uitls/utils";
+import { goToSection } from "../utils/utils";
 
 const Navbar = ({ endAnimation, sectionTops }) => {
   const [currentTab, setCurrentTab] = useState(["", "", "", ""]);

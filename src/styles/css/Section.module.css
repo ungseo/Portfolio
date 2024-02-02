@@ -64,6 +64,35 @@
     opacity: 1;
   }
 }
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes paintBorder {
+  0% {
+    width: 0;
+    border-top-color: red;
+    border-right-color: red;
+  }
+  70% {
+    width: 100%;
+  }
+  100% {
+    height: 100%;
+    border-top-color: red;
+    border-right-color: red;
+  }
+}
 #section1,
 #section2,
 #section3,
@@ -71,14 +100,12 @@
   height: 100vh;
   position: relative;
   z-index: 1;
-  margin: 0 20rem;
+  margin: 0 20%;
 }
 
 #section1 {
-  width: auto;
   height: 100vh;
   background-color: transparent;
-  width: calc(100vw - 40rem);
 }
 #section1 .contentWrapper {
   height: 92.5vh;
@@ -106,6 +133,26 @@
   height: 80%;
   margin: auto;
 }
+#section1 .contentWrapper .content .profile .typing {
+  color: blue;
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto 0 0;
+}
+#section1 .contentWrapper .content .profile .typing span {
+  position: relative;
+}
+#section1 .contentWrapper .content .profile .typing span:before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  right: -5px;
+  height: 2rem;
+  width: 4px;
+  background-color: blue;
+  animation: blink 1s infinite alternate;
+}
 #section1 .contentWrapper .content .photoWrapper {
   width: 100%;
   height: 80%;
@@ -114,7 +161,6 @@
   border-radius: 5rem;
   border: rebeccapurple solid 1px;
   overflow: hidden;
-  cursor: pointer;
   transition: transform 0.1s ease-out;
   animation: HalfUp ease-in-out 0.5s;
   box-shadow: 0 0 0.5rem black;
@@ -166,13 +212,29 @@
   width: 100%;
 }
 #section2 .contentWrapper .skillWrapper .skills {
-  border: 1px solid black;
-  border-radius: 5rem;
-  box-sizing: content-box;
-  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  background-color: rgba(237, 244, 255, 0.368627451);
+  padding: 2.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
   gap: 2rem;
+}
+#section2 .contentWrapper .certificationsWrapper {
+  height: auto;
+  width: 100%;
+}
+#section2 .contentWrapper .certificationsWrapper .certifications {
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+#section2 .contentWrapper .awardsWrapper {
+  height: auto;
+  width: 100%;
+}
+#section2 .contentWrapper .awardsWrapper .awards {
+  border: 2px solid black;
+  border-radius: 1rem;
 }
 
 #section3 {
@@ -205,7 +267,19 @@
   }
   #section1 {
     height: 92.5vh;
-    margin-top: 7.5vh;
+  }
+  #section1 .content {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  #section1 .content .photoWrapper {
+    height: 90% !important;
+    border-radius: 1rem !important;
+  }
+  #section1 .content .profile {
+    height: 90% !important;
+    border-radius: 1rem !important;
   }
 }
 

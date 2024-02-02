@@ -25,9 +25,10 @@ export const goToSection = (top) => {
 
   // 부드러운 스크롤 적용
   console.log(difference);
-  smoothScroll(currentScroll, top, 100); // 1000ms 동안 부드러운 스크롤 적용
+  smoothScroll(currentScroll, top, 100); // 100ms 동안 부드러운 스크롤 적용
 };
 
+// 섹션의 맨위 위치 가져오는 함수
 export const getOffsetTop = () => {
   const section1 = document.getElementById("section1");
   const section2 = document.getElementById("section2");
@@ -44,6 +45,7 @@ export const getOffsetTop = () => {
   }
 };
 
+// 점수뽑는함수
 export const getRatingStars = (rating) => {
   let stars = "";
   for (let i = 0; i < rating; i++) {
@@ -51,3 +53,28 @@ export const getRatingStars = (rating) => {
   }
   return stars;
 };
+
+export const msgList = [
+  [" ", "ㅇ", "아", "안", "안ㄴ", "안녀", "안녕"],
+  [
+    " ",
+    "ㅍ",
+    "프",
+    "프ㄹ",
+    "프로",
+    "프론",
+    "프론ㅌ",
+    "프론트",
+    "프론트 ",
+    "프론트 ㄷ",
+    "프론트 디",
+    "프론트 디ㅂ",
+    "프론트 디베",
+    "프론트 디벨",
+    "프론트 디벨ㄹ",
+    "프론트 디벨로",
+    "프론트 디벨로ㅍ",
+    "프론트 디벨로퍼",
+  ],
+  ["", "ㄱ", "기", "김", "김ㅇ", "김우", "김웅", "김웅ㅅ", "김웅서"],
+];

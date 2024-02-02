@@ -10,15 +10,21 @@ const Section2 = forwardRef((props, ref) => {
           <div className={style.skills}>
             <Skill name="React" rating={5} discription="hi" />
             <Skill name="React" rating={5} discription="hi" />
-            <Skill name="React" rating={5} discription="hi" />
+            <Skill
+              name="React"
+              rating={5}
+              discription="hihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihi"
+            />
             <Skill name="React" rating={5} discription="hi" />
           </div>
         </div>
         <div className={style.certificationsWrapper}>
           <h1>CERTIFICATIONS</h1>
+          <div className={style.certifications}></div>
         </div>
         <div className={style.awardsWrapper}>
           <h1>AWARDS</h1>
+          <div className={style.awards}></div>
         </div>
       </div>
     </div>

@@ -1,35 +1,103 @@
+$borderColorDefault: rgb(138, 188, 245);
+$borderColor: rgb(46, 76, 211);
+
 .container {
-  .logo {
-    padding: 1rem;
-    box-sizing: content-box;
-    background-size: cover;
-    .img {
-      width: 100%;
-      height: 100%;
-      background-image: url("/public/profile.png");
-      background-size: cover;
-    }
-  }
-  display: grid;
-  grid-template-columns: 1fr 2fr;
   width: 100%;
   height: 100%;
-  border: 1px solid black;
+  border: 2px solid $borderColorDefault;
+  border-radius: 5px;
   position: relative;
+  .top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1rem;
+    position: relative;
+    border-bottom: 2px solid lightgray;
 
-  &:before {
+    //여기 물어보고싶다. padding-bottom으로 사진을 1:1비율로 맞추는것
+    .logo {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/public/profile.png");
+        background-size: cover;
+      }
+    }
+    .text {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      position: relative;
+      width: 100%;
+    }
+  }
+  p {
+    white-space: normal;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+  &::before {
     content: "";
+    bottom: -2px;
+    right: -2px;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background-color: red;
   }
 
-  &:hover:before {
-    right: 100%;    
-    bottom: 100%;
-    transition: bottom 0.5s ease right 0.5s ease; /* left로 이동하는 애니메이션 추가 */
+  &:hover::before {
+    width: 100%;
+    height: 100%;
+    border-bottom-color: $borderColor;
+    border-left-color: $borderColor;
+    transition: border-color 0s ease-out, width 0.3s ease-out,
+      height 0.3s ease-out 0.25s;
+  }
+
+  &::after {
+    content: "";
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    border: 2px solid transparent;
+
+    position: absolute;
+  }
+
+  &:hover::after {
+    border-top-color: $borderColor;
+    border-right-color: $borderColor;
+    width: 100%;
+    height: 100%;
+    transition: border-color 0s ease 0.55s, width 0.3s ease 0.55s,
+      height 0.3s ease 0.8s;
+  }
+
+  .line {
+    position: absolute;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    right: 51%;
+    border-radius: 2px;
+    background-color: $borderColor;
+    transition: left 1.1s ease, right 1.1s ease;
+  }
+
+  &:hover {
+    .line {
+      left: 0;
+      right: 0;
+    }
   }
 }

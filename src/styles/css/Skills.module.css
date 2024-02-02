@@ -1,36 +1,90 @@
-@charset "UTF-8";
 .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
   width: 100%;
   height: 100%;
-  border: 1px solid black;
+  border: 2px solid rgb(138, 188, 245);
+  border-radius: 5px;
   position: relative;
 }
-.container .logo {
+.container .top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   padding: 1rem;
-  box-sizing: content-box;
-  background-size: cover;
+  position: relative;
+  border-bottom: 2px solid lightgray;
 }
-.container .logo .img {
+.container .top .logo {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+.container .top .logo .img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-image: url("/public/profile.png");
   background-size: cover;
 }
-.container:before {
+.container .top .text {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  width: 100%;
+}
+.container p {
+  white-space: normal;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+.container::before {
   content: "";
+  bottom: -2px;
+  right: -2px;
+  width: 0;
+  height: 0;
+  border: 2px solid transparent;
+  border-radius: 5px;
   position: absolute;
-  bottom: 0;
+}
+.container:hover::before {
+  width: 100%;
+  height: 100%;
+  border-bottom-color: rgb(46, 76, 211);
+  border-left-color: rgb(46, 76, 211);
+  transition: border-color 0s ease-out, width 0.3s ease-out, height 0.3s ease-out 0.25s;
+}
+.container::after {
+  content: "";
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  position: absolute;
+}
+.container:hover::after {
+  border-top-color: rgb(46, 76, 211);
+  border-right-color: rgb(46, 76, 211);
+  width: 100%;
+  height: 100%;
+  transition: border-color 0s ease 0.55s, width 0.3s ease 0.55s, height 0.3s ease 0.8s;
+}
+.container .line {
+  position: absolute;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  right: 51%;
+  border-radius: 2px;
+  background-color: rgb(46, 76, 211);
+  transition: left 1.1s ease, right 1.1s ease;
+}
+.container:hover .line {
   left: 0;
   right: 0;
-  height: 5px;
-  background-color: red;
-}
-.container:hover:before {
-  right: 100%;
-  bottom: 100%;
-  transition: bottom 0.5s ease right 0.5s ease; /* left로 이동하는 애니메이션 추가 */
 }
 
 /*# sourceMappingURL=Skills.module.css.map */

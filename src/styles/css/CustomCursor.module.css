@@ -1,0 +1,10 @@
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/*# sourceMappingURL=CustomCursor.module.css.map */

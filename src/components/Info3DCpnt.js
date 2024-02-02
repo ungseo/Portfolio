@@ -22,7 +22,8 @@ const Info3DCpnt = () => {
       <input type="radio" name="tabs" id={style.tablast} />
       <div className={style.cube}>
         <div className={style.content}>
-          <div className={style.photo}></div>
+          <h1>TOP CONTENT</h1>
+          <p>THIS IS TOP</p>
         </div>
         <div className={style.content}>
           <h1>FRONT CONTENT</h1>

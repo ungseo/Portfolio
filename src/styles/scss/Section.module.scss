@@ -1,4 +1,4 @@
-@import "Animation";
+@import "Animation", "Styles";
 
 #section1,
 #section2,
@@ -7,13 +7,11 @@
   height: 100vh;
   position: relative;
   z-index: 1;
-  margin: 0 20rem;
+  margin: 0 20%;
 }
 #section1 {
-  width: auto;
   height: 100vh;
   background-color: transparent;
-  width: calc(100vw - 40rem);
 
   .contentWrapper {
     height: calc(100vh * 0.925);
@@ -40,6 +38,26 @@
         animation: HalfUp ease-in-out 0.3s;
         height: 80%;
         margin: auto;
+        .typing {
+          color: blue;
+          position: relative;
+          font-size: 2rem;
+          font-weight: bold;
+          margin: 0 auto 0 0;
+          span {
+            position: relative;
+            &:before {
+              content: "";
+              position: absolute;
+              top: 0.4rem;
+              right: -5px;
+              height: 2rem;
+              width: 4px;
+              background-color: blue;
+              animation: blink 1s infinite alternate;
+            }
+          }
+        }
       }
       .photoWrapper {
         width: 100%;
@@ -49,7 +67,6 @@
         border-radius: 5rem;
         border: rebeccapurple solid 1px;
         overflow: hidden;
-        cursor: pointer;
         transition: transform 0.1s ease-out;
         animation: HalfUp ease-in-out 0.5s;
         box-shadow: 0 0 0.5rem black;
@@ -99,15 +116,31 @@
     .skillWrapper {
       height: auto;
       width: 100%;
-
       .skills {
-        border: 1px solid black;
-        border-radius: 5rem;
-        box-sizing: content-box;
-        padding: 2rem;
+        border: $section2Border;
+        border-radius: $section2BR;
+        background-color: #edf4ff5e;
+        padding: 2.5rem;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
         gap: 2rem;
+      }
+    }
+    .certificationsWrapper {
+      height: auto;
+      width: 100%;
+
+      .certifications {
+        border: $section2Border;
+        border-radius: $section2BR;
+      }
+    }
+    .awardsWrapper {
+      height: auto;
+      width: 100%;
+      .awards {
+        border: $section2Border;
+        border-radius: $section2BR;
       }
     }
   }
@@ -140,6 +173,18 @@
   }
   #section1 {
     height: calc(100vh * 0.925);
-    margin-top: calc(100vh * 0.075);
+    .content {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr !important;
+      gap: 0 !important;
+      .photoWrapper {
+        height: 90% !important;
+        border-radius: 1rem !important;
+      }
+      .profile {
+        height: 90% !important;
+        border-radius: 1rem !important;
+      }
+    }
   }
 }

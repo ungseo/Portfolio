@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #navbar {
-  width: 100vw;
+  width: 100%;
   height: 7.5vh;
   background-color: rgb(220, 227, 241);
   position: fixed;
@@ -9,17 +9,16 @@
   display: block;
 }
 #navbar .content {
-  width: calc(100% - 30rem); /* 여백이 없도록 설정 */
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 0 15rem;
+  margin: 0 20%;
 }
 #navbar a {
   position: relative;
   color: #615d5d;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin: auto;
   text-decoration: none;
 }
@@ -57,8 +56,10 @@
 /* 화면 크기가 768px 이하일 때 스타일 조정 */
 @media (max-width: 768px) {
   .content {
-    width: 100%;
     margin: 0; /* 작은 화면에서는 좀 더 좁게 조정 */
+  }
+  #navbar a {
+    font-size: 1rem;
   }
 }
 
