@@ -11,8 +11,6 @@ import Section4 from "./Section4";
 import CustomCursor from "./components/CustomCursor";
 
 function App() {
-  const screenWidth = window.screen.width;
-  const screenHeight = window.screen.height;
   const [endAnimation, setEndAnimation] = useState(false);
   const [sectionTops, setSectionTops] = useState([0, 0, 0, 0]);
 
@@ -21,8 +19,6 @@ function App() {
   const section2Ref = useRef();
   const section3Ref = useRef();
   const section4Ref = useRef();
-  console.log(`화면의 너비: ${screenWidth}px`);
-  console.log(`화면의 높이: ${screenHeight}px`);
 
   useEffect(() => {
     const updateOffsets = () => {
@@ -39,7 +35,6 @@ function App() {
         if (prev.every((value, index) => value === offsets[index])) {
           return prev;
         } else {
-          console.log(offsets);
           return offsets;
         }
       });
@@ -55,7 +50,7 @@ function App() {
     return () => {
       window.removeEventListener("resize", updateOffsets);
     };
-  }, []);
+  }, [endAnimation]);
 
   return (
     <div className={style.App}>
@@ -66,9 +61,9 @@ function App() {
         sectionTops={sectionTops}
       />
       <Section1 ref={section1Ref} endAnimation={endAnimation} />
-      <Section2 ref={section2Ref} />
-      <Section3 ref={section3Ref} />
-      <Section4 ref={section4Ref} />
+      <Section2 ref={section2Ref} endAnimation={endAnimation} />
+      <Section3 ref={section3Ref} endAnimation={endAnimation} />
+      <Section4 ref={section4Ref} endAnimation={endAnimation} />
 
       <Background2 endAnimation={endAnimation} />
       <Background

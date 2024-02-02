@@ -1,10 +1,10 @@
 import React, { forwardRef } from "react";
 import style from "./styles/css/Section.module.css";
 import Skill from "./components/Skill";
-const Section2 = forwardRef((props, ref) => {
+const Section2 = forwardRef(({ endAnimation }, ref) => {
   return (
     <div id={style.section2} ref={ref}>
-      <div className={style.contentWrapper}>
+      <div className={`${endAnimation ? style.contentWrapper : style.none}`}>
         <div className={style.skillWrapper}>
           <h1>SKILLS</h1>
           <div className={style.skills}>

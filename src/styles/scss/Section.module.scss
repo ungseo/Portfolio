@@ -16,28 +16,41 @@
   .contentWrapper {
     height: calc(100vh * 0.925);
     padding-top: calc(100vh * 0.075);
-
     .content {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      width: 100%;
-      height: 100%;
-      gap: 2rem;
-
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 100%;
+        height: 100%;
+        gap: 2rem;
+      }
+      @media (max-width: 768px) {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+      }
       .profile {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        max-width: 100%;
-        min-width: 100%;
         position: relative;
-        border-radius: 5rem;
+        border-radius: 2rem;
         background-color: transparent;
         border: rebeccapurple solid 1px;
+        box-sizing: border-box;
         box-shadow: 0 0 0.5rem black;
         animation: HalfUp ease-in-out 0.3s;
-        height: 80%;
-        margin: auto;
+        @media (min-width: 768px) {
+          width: 100%;
+          height: 80%;
+          margin: auto;
+        }
+        @media (max-width: 768px) {
+          width: 90%;
+          margin: auto;
+        }
+
         .typing {
           color: blue;
           position: relative;
@@ -64,13 +77,19 @@
         height: 80%;
         position: relative;
         background-color: rgba(207, 205, 205, 0.171);
-        border-radius: 5rem;
+        border-radius: 2rem;
         border: rebeccapurple solid 1px;
         overflow: hidden;
         transition: transform 0.1s ease-out;
         animation: HalfUp ease-in-out 0.5s;
         box-shadow: 0 0 0.5rem black;
-        margin: auto 0;
+        @media (min-width: 768px) {
+          margin: auto;
+        }
+        @media (max-width: 768px) {
+          width: 50%;
+          margin: 5% 25%;
+        }
         .icon {
           width: 50px;
           height: 50px;
@@ -115,24 +134,39 @@
     padding-top: calc(100vh * 0.075);
     .skillWrapper {
       height: auto;
-      width: 100%;
+      animation: HalfUp 0.7s ease-in-out;
+      @media (min-width: 768px) {
+        width: 100%;
+      }
+      @media (max-width: 768px) {
+        width: 90%;
+        margin: auto;
+      }
       .skills {
         border: $section2Border;
         border-radius: $section2BR;
         background-color: #edf4ff5e;
-        padding: 2.5rem;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
         gap: 2rem;
+        @media (min-width: 768px) {
+          grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+          padding: 2.5rem;
+        }
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+          padding: 1rem;
+        }
       }
     }
-    .certificationsWrapper {
-      height: auto;
-      width: 100%;
+    @media (min-width: 768px) {
+      .certificationsWrapper {
+        height: 100px;
+        width: 100%;
 
-      .certifications {
-        border: $section2Border;
-        border-radius: $section2BR;
+        .certifications {
+          border: $section2Border;
+          border-radius: $section2BR;
+        }
       }
     }
     .awardsWrapper {
@@ -161,7 +195,7 @@
   }
 }
 .none {
-  display: none;
+  opacity: 0;
 }
 @media (max-width: 768px) {
   #section1,

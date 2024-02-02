@@ -3,13 +3,12 @@ import style from "./styles/css/Section.module.css";
 import { msgList } from "./utils/utils";
 const Section1 = forwardRef(({ endAnimation }, ref) => {
   const [tilt, setTilt] = useState({ tiltX: 0, tiltY: 0 });
-
   const handleMouseMove = (e) => {
     const mouseX = e.clientX / window.innerWidth - 0.5;
     const mouseY = -(e.clientY / window.innerHeight - 0.5);
 
-    const newTiltX = mouseX * 35;
-    const newTiltY = mouseY * 35;
+    const newTiltX = mouseX * 30;
+    const newTiltY = mouseY * 30;
 
     setTilt({ tiltX: newTiltX, tiltY: newTiltY });
   };
@@ -17,18 +16,19 @@ const Section1 = forwardRef(({ endAnimation }, ref) => {
   const [message, setMessage] = useState("");
   const [msgIdx, setMsgIdx] = useState(0);
   const delay = 100;
-  const typingAnimation = () => {
-    for (let i = 0; i < words[msgIdx].length; i++) {
-      setTimeout(() => setMessage(words[msgIdx][i]), (i + 1) * delay);
-    }
-    for (let i = words[msgIdx].length - 1; i >= 0; i--) {
-      setTimeout(
-        () => setMessage(words[msgIdx][i]),
-        (2 * words[msgIdx].length - i) * delay
-      );
-    }
-  };
+
   useEffect(() => {
+    const typingAnimation = () => {
+      for (let i = 0; i < words[msgIdx].length; i++) {
+        setTimeout(() => setMessage(words[msgIdx][i]), (i + 1) * delay);
+      }
+      for (let i = words[msgIdx].length - 1; i >= 0; i--) {
+        setTimeout(
+          () => setMessage(words[msgIdx][i]),
+          (2 * words[msgIdx].length - i) * delay
+        );
+      }
+    };
     const playAnimation = async () => {
       typingAnimation();
       setTimeout(
@@ -46,7 +46,7 @@ const Section1 = forwardRef(({ endAnimation }, ref) => {
       <div className={style.contentWrapper}>
         <div className={style.content}>
           <div
-            className={`${endAnimation ? style.photoWrapper : ""}`}
+            className={`${endAnimation ? style.photoWrapper : style.none}`}
             style={{
               transform: `rotateX(${tilt.tiltY}deg) rotateY(${tilt.tiltX}deg)`,
             }}
