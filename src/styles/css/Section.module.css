@@ -235,10 +235,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 5rem;
   padding-top: 7.5vh;
 }
 #section2 .contentWrapper .skillWrapper {
-  height: auto;
   animation: HalfUp 0.7s ease-in-out;
 }
 @media (min-width: 768px) {
@@ -271,21 +271,40 @@
     padding: 1rem;
   }
 }
-@media (min-width: 768px) {
-  #section2 .contentWrapper .certificationsWrapper {
-    height: 100px;
-    width: 100%;
-  }
-  #section2 .contentWrapper .certificationsWrapper .certifications {
-    border: 2px solid black;
-    border-radius: 1rem;
-  }
-}
-#section2 .contentWrapper .awardsWrapper {
-  height: auto;
+#section2 .contentWrapper .certificationsWrapper {
   width: 100%;
 }
-#section2 .contentWrapper .awardsWrapper .awards {
+#section2 .contentWrapper .certificationsWrapper .certifications {
+  border: 2px solid black;
+  border-radius: 1rem;
+  background-color: rgba(237, 244, 255, 0.368627451);
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  #section2 .contentWrapper .certificationsWrapper .certifications {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    padding: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  #section2 .contentWrapper .certificationsWrapper .certifications {
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    padding: 1rem;
+  }
+}
+#section2 .contentWrapper .eduNawardWrapper {
+  width: 100%;
+}
+#section2 .contentWrapper .eduNawardWrapper .list2023 {
+  border-left: 2px solid black;
+  border-radius: 1rem;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 10% 10% 80%;
+  background-color: rgba(237, 244, 255, 0.368627451);
+}
+#section2 .contentWrapper .eduNawardWrapper .list2024 {
   border: 2px solid black;
   border-radius: 1rem;
 }

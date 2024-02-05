@@ -19,7 +19,6 @@ function App() {
   const section2Ref = useRef();
   const section3Ref = useRef();
   const section4Ref = useRef();
-
   useEffect(() => {
     const updateOffsets = () => {
       // Refs로 참조한 DOM 요소의 offsetTop 사용

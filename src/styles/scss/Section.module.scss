@@ -131,9 +131,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 5rem;
     padding-top: calc(100vh * 0.075);
     .skillWrapper {
-      height: auto;
       animation: HalfUp 0.7s ease-in-out;
       @media (min-width: 768px) {
         width: 100%;
@@ -158,21 +158,37 @@
         }
       }
     }
-    @media (min-width: 768px) {
-      .certificationsWrapper {
-        height: 100px;
-        width: 100%;
+    .certificationsWrapper {
+      width: 100%;
 
-        .certifications {
-          border: $section2Border;
-          border-radius: $section2BR;
+      .certifications {
+        border: $section2Border;
+        border-radius: $section2BR;
+        background-color: #edf4ff5e;
+        display: grid;
+        gap: 2rem;
+        @media (min-width: 768px) {
+          grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+          padding: 2.5rem;
+        }
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+          padding: 1rem;
         }
       }
     }
-    .awardsWrapper {
-      height: auto;
+    .eduNawardWrapper {
       width: 100%;
-      .awards {
+
+      .list2023 {
+        border-left: $section2Border;
+        border-radius: $section2BR;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: 10% 10% 80%;
+        background-color: #edf4ff5e;
+      }
+      .list2024 {
         border: $section2Border;
         border-radius: $section2BR;
       }

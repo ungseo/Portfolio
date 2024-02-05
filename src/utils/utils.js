@@ -78,3 +78,81 @@ export const msgList = [
   ],
   ["", "ㄱ", "기", "김", "김ㅇ", "김우", "김웅", "김웅ㅅ", "김웅서"],
 ];
+
+export const myList = {
+  skills: {},
+  certifications: [
+    {
+      Name: "재경관리사",
+      Date: "2022-08-15",
+      Organization: "삼일회계법인",
+      Number: "09-129302102",
+      Img: "",
+    },
+    {
+      Name: "컴퓨터활용능력1급",
+      Date: "2022-08-15",
+      Organization: "우리집",
+      Number: "09-223KKslskd",
+      Img: "",
+    },
+    {
+      Name: "컴퓨터활용능력1급",
+      Date: "2022-08-15",
+      Organization: "우리집",
+      Number: "09-223KKslskd",
+      Img: "",
+    },
+  ],
+  eduNawards: {
+    2023: [
+      {
+        Date: "01-30",
+        Content:
+          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
+      },
+      {
+        Date: "01-30",
+        Content:
+          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
+      },
+      {
+        Date: "01-30",
+        Content:
+          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
+      },
+      {
+        Date: "01-30",
+        Content:
+          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
+      },
+      {
+        Date: "01-30",
+        Content:
+          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
+      },
+      {
+        Date: "01-30",
+        Content:
+          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
+      },
+      {
+        Date: "01-30",
+        Content:
+          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
+      },
+      {
+        Date: "01-30",
+        Content:
+          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
+      },
+    ],
+    2024: [
+      {
+        Date: "02-05",
+        Content:
+          "MapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLand",
+      },
+    ],
+  },
+};

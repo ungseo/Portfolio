@@ -1,0 +1,31 @@
+.year,
+.date,
+.content {
+  word-wrap: break-word;
+  padding: 0 1rem 1rem;
+  margin-top: 0;
+}
+
+.year {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.date {
+  font-weight: 600;
+}
+
+.content {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 0.5rem;
+  min-height: 100px;
+  text-align: start;
+
+  &:hover {
+    background-color: #ffffff6b;
+    .date {
+      background-color: #ffffff6b;
+    }
+  }
+}
