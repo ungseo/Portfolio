@@ -7,13 +7,13 @@
   text-align: center;
   position: relative;
 }
-.container .ip input {
+.container input {
   display: none;
 }
-.container .ip .tab {
+.container .tab {
   position: absolute;
   width: 10%;
-  height: 24%;
+  height: 28%;
   background: pink;
   right: 0;
   line-height: 70px;
@@ -22,27 +22,32 @@
   border-radius: 2rem;
   border: 2px solid black;
 }
-.container .ip .tab:nth-child(1) {
+@media (max-width: 768px) {
+  .container .tab {
+    border-radius: 1.5rem;
+  }
+}
+.container .tab:nth-child(1) {
   top: 0;
   background: #f1f6ff;
 }
-.container .ip .tab:nth-child(2) {
-  top: 25%;
+.container .tab:nth-child(2) {
+  top: 30%;
   background: #ebf5fd;
 }
-.container .ip .tab:nth-child(3) {
-  top: 50%;
+.container .tab:nth-child(3) {
+  top: 60%;
   background: #b0c7f8;
 }
-.container .ip .tab:nth-child(4) {
-  top: 75%;
+.container .tab:nth-child(4) {
+  top: 90%;
   background: #6aa2c7;
 }
 .container .cube {
   position: relative;
-  left: 8%;
   width: 75%;
   height: 100%;
+  margin-left: 7.7%;
   transform-origin: 0% 50%;
   transform-style: preserve-3d;
   transition: transform 0.5s ease-in;
@@ -82,7 +87,7 @@
   background-color: #6aa2c7;
 }
 
-#tabtop:checked ~ .container.cube {
+#tabtop:checked ~ .cube {
   transform: rotateX(-90deg);
 }
 

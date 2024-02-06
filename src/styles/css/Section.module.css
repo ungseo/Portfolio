@@ -257,6 +257,7 @@
   }
 }
 #section2 .contentWrapper .certificationsWrapper {
+  animation: HalfUp 0.7s ease-in-out;
   width: 100%;
 }
 #section2 .contentWrapper .certificationsWrapper .certifications {
@@ -275,6 +276,7 @@
   }
 }
 #section2 .contentWrapper .eduNawardWrapper {
+  animation: HalfUp 0.7s ease-in-out;
   width: 100%;
 }
 #section2 .contentWrapper .eduNawardWrapper .list2023 {
@@ -294,9 +296,13 @@
   position: relative;
 }
 #section3 .contentWrapper {
-  background-color: red;
   height: 92.5vh;
   padding-top: 7.5vh;
+}
+@media (max-width: 768px) {
+  #section3 .contentWrapper {
+    padding: 1rem;
+  }
 }
 
 #section4 {

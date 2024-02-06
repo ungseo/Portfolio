@@ -5,7 +5,7 @@ import Info3DCpnt from "./components/Info3DCpnt";
 const Section3 = forwardRef(({ endAnimation }, ref) => {
   return (
     <div id={style.section3} ref={ref}>
-      <div className={style.contentWrapper}>
+      <div className={`${endAnimation ? style.contentWrapper : style.none}`}>
         <h1>hi</h1>
         <Info3DCpnt />
       </div>

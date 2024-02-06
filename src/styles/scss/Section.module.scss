@@ -149,6 +149,8 @@
       }
     }
     .certificationsWrapper {
+      animation: HalfUp 0.7s ease-in-out;
+
       width: 100%;
 
       .certifications {
@@ -166,6 +168,7 @@
       }
     }
     .eduNawardWrapper {
+      animation: HalfUp 0.7s ease-in-out;
       width: 100%;
 
       .list2023 {
@@ -186,9 +189,11 @@
 #section3 {
   position: relative;
   .contentWrapper {
-    background-color: red;
     height: calc(100vh * 0.925);
     padding-top: calc(100vh * 0.075);
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
   }
 }
 #section4 {
