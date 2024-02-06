@@ -1,14 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Phenomenon from "phenomenon";
+import style from "../styles/css/Background.module.css";
 
 const Background = ({ endAnimation, setEndAnimation }) => {
   const canvasRef = useRef(null);
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
+  const [screen, setScreen] = useState({ screenWidth, screenHeight });
+  console.log(screenWidth, screenHeight);
   // const handleEndAnimation = useCallback(() => {
   //   setEndAnimation(true);
   // }, [setEndAnimation]);
-
+  useEffect(() => {
+    setScreen({
+      screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight,
+    });
+  }, [screenWidth, screenHeight]);
   useEffect(() => {
     if (endAnimation) {
       return;
@@ -183,17 +191,11 @@ const Background = ({ endAnimation, setEndAnimation }) => {
 
   return (
     <canvas
+      className={style.background1}
       ref={canvasRef}
       style={{
-        position: "fixed",
-        left: "0",
-        top: "0",
-        width: `min(${screenWidth}px)`,
-        height: `min(${screenHeight}px)`,
-        imageRendering: "pixelated",
-        overflow: "hidden",
-        zIndex: `999`,
-        pointerEvents: "none",
+        width: `${screen.screenWidth}px`,
+        height: `${screen.screenHeight}px`,
       }}
     />
   );

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import style from "../styles/css/Background.module.css";
 
 class SnowFlake {
   constructor() {

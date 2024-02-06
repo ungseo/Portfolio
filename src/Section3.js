@@ -6,6 +6,7 @@ const Section3 = forwardRef(({ endAnimation }, ref) => {
   return (
     <div id={style.section3} ref={ref}>
       <div className={style.contentWrapper}>
+        <h1>hi</h1>
         <Info3DCpnt />
       </div>
     </div>

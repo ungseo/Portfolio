@@ -19,8 +19,7 @@
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-radius: 0.5rem;
-  min-height: 100px;
-  text-align: start;
+  min-height: 70px;
 }
 .content:hover {
   background-color: rgba(255, 255, 255, 0.4196078431);

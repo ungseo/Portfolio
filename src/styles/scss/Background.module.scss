@@ -1,0 +1,9 @@
+.background1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  image-rendering: pixelated;
+  overflow: hidden;
+  z-index: 999;
+  pointer-events: none;
+}

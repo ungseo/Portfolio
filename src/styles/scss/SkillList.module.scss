@@ -1,0 +1,21 @@
+@import "Styles";
+.container {
+  border: $section2Border;
+  border-radius: $section2BR;
+  background-color: #edf4ff5e;
+  h3 {
+    text-align: end;
+    margin: 1rem 2rem;
+    box-sizing: border-box;
+  }
+  .wrapper {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    padding: 0 2.5rem 2.5rem;
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      padding: 1rem;
+    }
+  }
+}

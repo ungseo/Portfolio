@@ -99,6 +99,7 @@
   border: 2px solid lightblue;
   border-radius: 10px;
   padding: 1rem;
+  transform-style: preserve-3d;
   transition: scale 0.2s ease, box-shadow 0.2s ease;
 }
 .container .left {
@@ -118,10 +119,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
   width: 0;
   height: 0;
   transition: height 0s ease, width 0.5s ease;
+  transform: translate3d(-50%, -50%, -1em);
   z-index: 2;
 }
 .container:hover {

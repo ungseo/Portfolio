@@ -1,0 +1,24 @@
+.container {
+  border: 2px solid black;
+  border-radius: 1rem;
+  background-color: rgba(237, 244, 255, 0.368627451);
+}
+.container h3 {
+  text-align: end;
+  margin: 1rem 2rem;
+  box-sizing: border-box;
+}
+.container .wrapper {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  padding: 0 2.5rem 2.5rem;
+}
+@media (max-width: 768px) {
+  .container .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    padding: 1rem;
+  }
+}
+
+/*# sourceMappingURL=SkillList.module.css.map */

@@ -1,25 +1,31 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
 import style from "./styles/css/Section.module.css";
 import Skill from "./components/Skill";
 import Certification from "./components/Certification";
 import { myList } from "./utils/utils";
 import EduAndAward from "./components/EduAndAward";
+import Buttons from "./components/Buttons";
+import SkillList from "./components/SkillList";
 const Section2 = forwardRef(({ endAnimation }, ref) => {
+  const [clicked, setClicked] = useState("language");
+  const Click = (str) => {
+    setClicked(str);
+    console.log(clicked);
+  };
   return (
     <div id={style.section2} ref={ref}>
       <div className={`${endAnimation ? style.contentWrapper : style.none}`}>
         <div className={style.skillWrapper}>
-          <h1>SKILLS</h1>
-          <div className={style.skills}>
-            <Skill name="React" rating={5} discription="hi" />
-            <Skill name="React" rating={5} discription="hi" />
-            <Skill
-              name="React"
-              rating={5}
-              discription="hihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihihi"
-            />
-            <Skill name="React" rating={5} discription="hi" />
-          </div>
+          <h1 className={style.title}>
+            SKILLS
+            <div className={style.tabs}>
+              <Buttons text={"Lang"} id={"language"} onClick={Click} />
+              <Buttons text={"Front"} id={"front"} onClick={Click} />
+              <Buttons text={"Back"} id={"back"} onClick={Click} />
+              <Buttons text={"Others"} id={"others"} onClick={Click} />
+            </div>
+          </h1>
+          <SkillList category={clicked} />
         </div>
         <div className={style.certificationsWrapper}>
           <h1>CERTIFICATIONS</h1>
@@ -49,7 +55,6 @@ const Section2 = forwardRef(({ endAnimation }, ref) => {
               />
             ))}
           </div>
-          <div className={style.list2024}></div>
         </div>
       </div>
     </div>

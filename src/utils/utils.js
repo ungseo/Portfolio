@@ -51,6 +51,9 @@ export const getRatingStars = (rating) => {
   for (let i = 0; i < rating; i++) {
     stars += "★";
   }
+  for (let i = 0; i < 5 - rating; i++) {
+    stars += "☆";
+  }
   return stars;
 };
 
@@ -65,42 +68,113 @@ export const msgList = [
     "프론",
     "프론ㅌ",
     "프론트",
-    "프론트 ",
-    "프론트 ㄷ",
-    "프론트 디",
-    "프론트 디ㅂ",
-    "프론트 디베",
-    "프론트 디벨",
-    "프론트 디벨ㄹ",
-    "프론트 디벨로",
-    "프론트 디벨로ㅍ",
-    "프론트 디벨로퍼",
+    "프론트ㅇ",
+    "프론트에",
+    "프론트엔",
+    "프론트엔ㄷ",
+    "프론트엔드",
+    "프론트엔드 ",
+    "프론트엔드 ㄱ",
+    "프론트엔드 개",
+    "프론트엔드 개ㅂ",
+    "프론트엔드 개바",
+    "프론트엔드 개발",
+    "프론트엔드 개발ㅈ",
+    "프론트엔드 개발자",
   ],
   ["", "ㄱ", "기", "김", "김ㅇ", "김우", "김웅", "김웅ㅅ", "김웅서"],
 ];
 
 export const myList = {
-  skills: {},
+  front: [
+    { Name: "HTML/CSS", Rating: 4, Discription: "좀잘해요", Img: "html.png" },
+    {
+      Name: "React.js",
+      Rating: 4,
+      Discription: "좀잘해요",
+      Img: "react.png",
+    },
+    { Name: "Vue.js", Rating: 4, Discription: "좀잘해요", Img: "vue.png" },
+  ],
+  language: [
+    { Name: "Javascript", Rating: 4, Discription: "좀잘해요", Img: "js.png" },
+    {
+      Name: "Typescript",
+      Rating: 4,
+      Discription: "좀잘해요",
+      Img: "ts.png",
+    },
+    { Name: "Python", Rating: 4, Discription: "좀잘해요", Img: "python.png" },
+    { Name: "C#", Rating: 4, Discription: "좀잘해요", Img: "c-sharp.png" },
+    { Name: "Java", Rating: 4, Discription: "좀잘해요", Img: "java.png" },
+  ],
+  back: [
+    { Name: "Django", Rating: 4, Discription: "좀잘해요", Img: "django.png" },
+    {
+      Name: "Firebase",
+      Rating: 4,
+      Discription: "좀잘해요",
+      Img: "firebase.png",
+    },
+  ],
+  others: [
+    {
+      Name: "Git/Github",
+      Rating: 4,
+      Discription: "좀잘해요",
+      Img: "git.png",
+    },
+    { Name: "Jira", Rating: 4, Discription: "좀잘해요", Img: "jira.png" },
+    {
+      Name: "Unity Version Control",
+      Rating: 4,
+      Discription: "좀잘해요",
+      Img: "uvc.png",
+    },
+  ],
+
+  collaborationTools: [],
   certifications: [
     {
-      Name: "재경관리사",
-      Date: "2022-08-15",
-      Organization: "삼일회계법인",
+      Name: "정보처리기사",
+      Date: "2023-09-06",
+      Organization: "한국산업인력공단",
       Number: "09-129302102",
       Img: "",
     },
     {
-      Name: "컴퓨터활용능력1급",
-      Date: "2022-08-15",
-      Organization: "우리집",
-      Number: "09-223KKslskd",
+      Name: "Softeer HSAT level 3",
+      Date: "2023-08-25",
+      Organization: "현대엔지비",
+      Number: "09-129302102",
+      Img: "",
+    },
+    {
+      Name: "TOEIC",
+      Date: "2022-09-25",
+      Organization: "ETS",
+      Number: "910점",
+      Img: "",
+    },
+    {
+      Name: "재경관리사",
+      Date: "2022-08-05",
+      Organization: "삼일회계법인",
+      Number: "0-94-00094",
       Img: "",
     },
     {
       Name: "컴퓨터활용능력1급",
-      Date: "2022-08-15",
-      Organization: "우리집",
-      Number: "09-223KKslskd",
+      Date: "2019-03-15",
+      Organization: "대한상공회의소",
+      Number: "19-K9-021483",
+      Img: "",
+    },
+    {
+      Name: "ERP회계정보관리사 2급",
+      Date: "2018-06-12",
+      Organization: "대한상공회의소",
+      Number: "19-K9-021483",
       Img: "",
     },
   ],

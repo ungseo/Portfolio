@@ -61,12 +61,14 @@ const Section1 = forwardRef(({ endAnimation }, ref) => {
             }}
           >
             <div>
+              <h1>안녕하세요!</h1>
               <h1>끊임없이 흡수하는, </h1>
               <h1>오늘보다 내일이 더 기대되는 개발자 김웅서 입니다.</h1>
             </div>
             <div className={style.typing}>
-              <span>&nbsp;{message}</span>
+              저는 <span>" {message}</span> " 입니다.
             </div>
+
             <h1> </h1>
           </div>
         </div>
