@@ -8,6 +8,7 @@ import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
+import Footer from "./components/Footer";
 
 function App() {
   const [endAnimation, setEndAnimation] = useState(false);
@@ -61,7 +62,7 @@ function App() {
       <Section2 ref={section2Ref} endAnimation={endAnimation} />
       <Section3 ref={section3Ref} endAnimation={endAnimation} />
       <Section4 ref={section4Ref} endAnimation={endAnimation} />
-
+      <Footer endAnimation={endAnimation} />
       <Background2 endAnimation={endAnimation} />
       <Background
         endAnimation={endAnimation}

@@ -6,6 +6,7 @@ import { myList } from "./utils/utils";
 import EduAndAward from "./components/EduAndAward";
 import Buttons from "./components/Buttons";
 import SkillList from "./components/SkillList";
+import EduAndAwardList from "./components/EduAndAwardList";
 const Section2 = forwardRef(({ endAnimation }, ref) => {
   const [clicked, setClicked] = useState("language");
   const Click = (str) => {
@@ -44,17 +45,7 @@ const Section2 = forwardRef(({ endAnimation }, ref) => {
         </div>
         <div className={style.eduNawardWrapper}>
           <h1>EDUCATIONS & AWARDS</h1>
-          <div className={style.list2023}>
-            {myList["eduNawards"][2023].map((val, idx) => (
-              <EduAndAward
-                key={idx}
-                year={idx == 0 ? "2023" : ""}
-                date={val.Date}
-                content={val.Content}
-                style={{}}
-              />
-            ))}
-          </div>
+          <EduAndAwardList />
         </div>
       </div>
     </div>

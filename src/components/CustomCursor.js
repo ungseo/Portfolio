@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "../styles/css/CustomCursor.module.css";
-const CustomCursor = () => {
+const CustomCursor = ({ clicked }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   useEffect(() => {
     const updatePosition = (e) => {
@@ -15,7 +15,19 @@ const CustomCursor = () => {
   return (
     <div
       className={style.cursor}
-      style={{ left: `${position.x}px`, top: `${position.y}px` }}
+      style={
+        clicked
+          ? {
+              left: "50%",
+              top: "-1.5rem",
+              transform: "translateX(-50%)",
+              transition: "top 0.3s ease, left 0.3s ease",
+            }
+          : {
+              left: `calc(${position.x}px - 20vw + 3px)`,
+              top: `calc(${position.y}px - 20vh + 30px )`,
+            }
+      }
     ></div>
   );
 };

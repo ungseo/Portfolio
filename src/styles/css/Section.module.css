@@ -97,9 +97,8 @@
 #section2,
 #section3,
 #section4 {
-  height: 100vh;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   margin: 0 20%;
 }
 
@@ -129,6 +128,7 @@
   }
 }
 #section1 .contentWrapper .content .profile {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -144,12 +144,16 @@
   #section1 .contentWrapper .content .profile {
     height: 80%;
     margin: auto;
+    padding: 1rem;
   }
 }
 @media (max-width: 768px) {
   #section1 .contentWrapper .content .profile {
     margin: auto;
   }
+}
+#section1 .contentWrapper .content .profile .script {
+  text-align: start;
 }
 #section1 .contentWrapper .content .profile .typing {
   color: blue;
@@ -178,10 +182,10 @@
   background-color: rgba(237, 244, 255, 0.368627451);
   border-radius: 2rem;
   border: rebeccapurple solid 1px;
-  overflow: hidden;
   transition: transform 0.1s ease-out;
   animation: HalfUp ease-in-out 0.5s;
   box-shadow: 0 0 0.5rem black;
+  cursor: none;
 }
 @media (min-width: 768px) {
   #section1 .contentWrapper .content .photoWrapper {
@@ -211,7 +215,7 @@
   background-size: cover;
   background-position: center;
   background-image: url("/public/stand-removebg-preview.png");
-  transform: scale(0); /* Fix: use transform instead of scale */
+  transform: scale(0);
   transition: transform 0.2s ease-in-out;
 }
 #section1 .contentWrapper .content .photoWrapper:hover {
@@ -279,18 +283,6 @@
   animation: HalfUp 0.7s ease-in-out;
   width: 100%;
 }
-#section2 .contentWrapper .eduNawardWrapper .list2023 {
-  border-left: 2px solid black;
-  border-radius: 1rem;
-  padding-top: 1rem;
-  display: grid;
-  grid-template-columns: 10% 10% 80%;
-  background-color: rgba(237, 244, 255, 0.368627451);
-}
-#section2 .contentWrapper .eduNawardWrapper .list2024 {
-  border: 2px solid black;
-  border-radius: 1rem;
-}
 
 #section3 {
   position: relative;
@@ -309,8 +301,21 @@
   position: relative;
 }
 #section4 .contentWrapper {
+  position: relative;
   height: 92.5vh;
   padding-top: 7.5vh;
+}
+@media (max-width: 768px) {
+  #section4 .contentWrapper {
+    padding: 1rem;
+  }
+}
+#section4 .contentWrapper .content {
+  width: 100%;
+  height: 80%;
+  border: 2px solid black;
+  border-radius: 1rem;
+  background-color: rgba(237, 244, 255, 0.368627451);
 }
 
 .none {

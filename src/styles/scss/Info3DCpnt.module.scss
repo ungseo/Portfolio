@@ -19,7 +19,7 @@
     font-weight: 300;
     z-index: 20;
     border-radius: 2rem;
-    border: 2px solid black;
+    border: 1px solid black;
     @media (max-width: 768px) {
       border-radius: 1.5rem;
     }
@@ -54,7 +54,7 @@
       height: 100%;
       position: absolute;
       border-radius: 2rem;
-      border: 2px solid black;
+      border: 1px solid black;
 
       h1 {
         font-size: 2rem;

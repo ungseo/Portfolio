@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/EduAndAward.module.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;EAGE;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;;AACA;EACE;;AACA;EACE","file":"EduAndAward.module.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/EduAndAward.module.scss","../scss/Styles.scss"],"names":[],"mappings":"AAEE;EACE,aCDa;EDEb,eCDS;EDET;EACA,kBCLW;;ADMX;EACE;EACA;;AACA;AAAA;AAAA;EAGE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;;AAGF;EACE;EACA;EACA;EACA;;AAGA;EACE;;AAEF;EACE","file":"EduAndAward.module.css"}

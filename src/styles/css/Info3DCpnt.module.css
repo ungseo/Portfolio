@@ -20,7 +20,7 @@
   font-weight: 300;
   z-index: 20;
   border-radius: 2rem;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 @media (max-width: 768px) {
   .container .tab {
@@ -58,7 +58,7 @@
   height: 100%;
   position: absolute;
   border-radius: 2rem;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 .container .cube .content h1 {
   font-size: 2rem;

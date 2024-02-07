@@ -4,9 +4,8 @@
 #section2,
 #section3,
 #section4 {
-  height: 100vh;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   margin: 0 20%;
 }
 #section1 {
@@ -31,6 +30,7 @@
         padding: 0 5%;
       }
       .profile {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -44,11 +44,14 @@
         @media (min-width: 768px) {
           height: 80%;
           margin: auto;
+          padding: 1rem;
         }
         @media (max-width: 768px) {
           margin: auto;
         }
-
+        .script {
+          text-align: start;
+        }
         .typing {
           color: blue;
           position: relative;
@@ -77,10 +80,11 @@
         background-color: $ContainerBGC;
         border-radius: 2rem;
         border: rebeccapurple solid 1px;
-        overflow: hidden;
         transition: transform 0.1s ease-out;
         animation: HalfUp ease-in-out 0.5s;
         box-shadow: 0 0 0.5rem black;
+        cursor: none;
+
         @media (min-width: 768px) {
           margin: auto;
         }
@@ -105,7 +109,7 @@
           background-size: cover;
           background-position: center;
           background-image: url("/public/stand-removebg-preview.png");
-          transform: scale(0); /* Fix: use transform instead of scale */
+          transform: scale(0);
           transition: transform 0.2s ease-in-out;
         }
         &:hover {
@@ -170,19 +174,6 @@
     .eduNawardWrapper {
       animation: HalfUp 0.7s ease-in-out;
       width: 100%;
-
-      .list2023 {
-        border-left: $section2Border;
-        border-radius: $section2BR;
-        padding-top: 1rem;
-        display: grid;
-        grid-template-columns: 10% 10% 80%;
-        background-color: $ContainerBGC;
-      }
-      .list2024 {
-        border: $section2Border;
-        border-radius: $section2BR;
-      }
     }
   }
 }
@@ -199,8 +190,19 @@
 #section4 {
   position: relative;
   .contentWrapper {
+    position: relative;
     height: calc(100vh * 0.925);
     padding-top: calc(100vh * 0.075);
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+    .content {
+      width: 100%;
+      height: 80%;
+      border: $section2Border;
+      border-radius: $section2BR;
+      background-color: $ContainerBGC;
+    }
   }
 }
 .none {

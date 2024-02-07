@@ -1,31 +1,39 @@
-.year,
-.date,
-.content {
+.container .contentWrapper {
+  border-left: 2px solid black;
+  border-radius: 1rem;
+  padding-top: 1rem;
+  background-color: rgba(237, 244, 255, 0.368627451);
+}
+.container .contentWrapper .contentRow {
+  display: grid;
+  grid-template-columns: 10% 15% 75%;
+}
+.container .contentWrapper .contentRow .year,
+.container .contentWrapper .contentRow .date,
+.container .contentWrapper .contentRow .content {
   word-wrap: break-word;
-  padding: 0 1rem 1rem;
+  padding: 0 1rem;
   margin-top: 0;
 }
-
-.year {
+.container .contentWrapper .contentRow .year {
   font-weight: bold;
   font-size: 1.5rem;
+  transition: opacity 1s ease;
 }
-
-.date {
+.container .contentWrapper .contentRow .date {
   font-weight: 600;
 }
-
-.content {
+.container .contentWrapper .contentRow .content {
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-radius: 0.5rem;
-  min-height: 70px;
+  min-height: 75px;
 }
-.content:hover {
+.container .contentWrapper .contentRow:hover .content {
   background-color: rgba(255, 255, 255, 0.4196078431);
 }
-.content:hover .date {
-  background-color: rgba(255, 255, 255, 0.4196078431);
+.container .contentWrapper .contentRow:hover .year {
+  opacity: 1 !important;
 }
 
 /*# sourceMappingURL=EduAndAward.module.css.map */

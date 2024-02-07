@@ -1,29 +1,45 @@
-.year,
-.date,
-.content {
-  word-wrap: break-word;
-  padding: 0 1rem 1rem;
-  margin-top: 0;
-}
+@import "Styles";
+.container {
+  .contentWrapper {
+    border-left: $section2Border;
+    border-radius: $section2BR;
+    padding-top: 1rem;
+    background-color: $ContainerBGC;
+    .contentRow {
+      display: grid;
+      grid-template-columns: 10% 15% 75%;
+      .year,
+      .date,
+      .content {
+        word-wrap: break-word;
+        padding: 0 1rem;
+        margin-top: 0;
+      }
 
-.year {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
+      .year {
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: opacity 1s ease;
+      }
 
-.date {
-  font-weight: 600;
-}
+      .date {
+        font-weight: 600;
+      }
 
-.content {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-radius: 0.5rem;
-  min-height: 70px;
-  &:hover {
-    background-color: #ffffff6b;
-    .date {
-      background-color: #ffffff6b;
+      .content {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-radius: 0.5rem;
+        min-height: 75px;
+      }
+      &:hover {
+        .content {
+          background-color: #ffffff6b;
+        }
+        .year {
+          opacity: 1 !important;
+        }
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import style from "../styles/css/Info3DCpnt.module.css";
+import Projects from "./Projects";
 
 const Info3DCpnt = () => {
   return (
@@ -22,20 +23,16 @@ const Info3DCpnt = () => {
       <input type="radio" name="tabs" id={style.tablast} />
       <div className={style.cube}>
         <div className={style.content}>
-          <h1>TOP CONTENT</h1>
-          <p>THIS IS TOP</p>
+          <Projects pjtNo="first" />
         </div>
         <div className={style.content}>
-          <h1>FRONT CONTENT</h1>
-          <p>THIS IS COOL</p>
+          <Projects pjtNo="second" />
         </div>
         <div className={style.content}>
-          <h1>BOTTOM CONTENT</h1>
-          <p>THIS IS SWEET</p>
+          <Projects pjtNo="third" />
         </div>
         <div className={style.content}>
-          <h1>LAST CONTENT</h1>
-          <p>THIS IS FUCK</p>
+          <Projects pjtNo="fourth" />
         </div>
       </div>
     </div>

@@ -1,8 +1,9 @@
 .cursor {
-  position: fixed;
+  position: absolute;
   width: 40px;
   height: 40px;
-  background-color: red;
+  background-image: url(/public/clip.png);
+  background-size: cover;
   pointer-events: none;
   z-index: 9999;
 }

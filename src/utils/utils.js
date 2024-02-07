@@ -116,6 +116,12 @@ export const myList = {
       Discription: "좀잘해요",
       Img: "firebase.png",
     },
+    {
+      Name: "MySQL",
+      Rating: 4,
+      Discription: "좀잘해요",
+      Img: "mysql.png",
+    },
   ],
   others: [
     {
@@ -131,9 +137,13 @@ export const myList = {
       Discription: "좀잘해요",
       Img: "uvc.png",
     },
+    {
+      Name: "Figma",
+      Rating: 4,
+      Discription: "좀잘해요",
+      Img: "figma.png",
+    },
   ],
-
-  collaborationTools: [],
   certifications: [
     {
       Name: "정보처리기사",
@@ -178,55 +188,42 @@ export const myList = {
       Img: "",
     },
   ],
-  eduNawards: {
-    2023: [
-      {
-        Date: "01-30",
-        Content:
-          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
-      },
-      {
-        Date: "01-30",
-        Content:
-          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
-      },
-      {
-        Date: "01-30",
-        Content:
-          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
-      },
-      {
-        Date: "01-30",
-        Content:
-          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
-      },
-      {
-        Date: "01-30",
-        Content:
-          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
-      },
-      {
-        Date: "01-30",
-        Content:
-          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
-      },
-      {
-        Date: "01-30",
-        Content:
-          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
-      },
-      {
-        Date: "01-30",
-        Content:
-          "SSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafySSafy",
-      },
-    ],
-    2024: [
-      {
-        Date: "02-05",
-        Content:
-          "MapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLandMapleLand",
-      },
-    ],
-  },
+  eduNawards: [
+    {
+      2023: [
+        {
+          Date: "10.10 ~ 11.24",
+          Content: `자율 프로젝트
+           (도메인: 게임, 서비스 명: Make It Louder!)`,
+        },
+        {
+          Date: "08.21 ~ 10.06",
+          Content: `특화 프로젝트 
+          (도메인: 핀테크, 서비스 명: 한푼두푼)`,
+        },
+        {
+          Date: "07.02 ~ 08.17",
+          Content: `공통 프로젝트 (
+            도메인: 웹디자인, 서비스 명: 미:리뷰)`,
+        },
+        {
+          Date: "06.01 ~ 12.29",
+          Content: "삼성 청년 SW아카데미 2학기",
+        },
+        {
+          Date: "01.04 ~ 05.26",
+          Content: "삼성 청년 SW아카데미 1학기",
+        },
+      ],
+    },
+    { 2020: [{ Date: "", Content: "조선대학교 경영학부 졸업" }] },
+    {
+      2012: [
+        {
+          Date: "02-05",
+          Content: "광주 금호고등학교 졸업",
+        },
+      ],
+    },
+  ],
 };
