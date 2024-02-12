@@ -5,50 +5,87 @@
   height: 100%;
   padding: 1rem;
   box-sizing: border-box;
-  .title {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    h1 {
-      margin: auto;
-      font-weight: bold;
-      font-size: 10rem;
-      span {
-        font-size: 1.5rem;
-      }
-    }
-    h3 {
-      margin-bottom: auto;
-      text-align: end;
-      font-weight: lighter;
-    }
-  }
-  .introduce {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 1rem;
-    height: 40%;
-    .thumbnail {
-      position: relative;
-      background-image: url(/src/assets/thumbnail1.png);
-      background-size: cover;
-      background-position: center;
-
-      &::before {
-        content: "";
-        width: 30%;
-        height: 30%;
-        position: absolute;
-        border-radius: 1rem;
-        top: 50%;
-        bottom: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        background-color: red;
-
-        &:hover::before {
-          background-color: blue;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  .top {
+    .title {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      h1 {
+        margin: auto;
+        font-weight: bold;
+        span {
+          font-size: 1.5rem;
         }
       }
+      h3 {
+        margin-bottom: auto;
+        text-align: end;
+        font-weight: lighter;
+      }
+    }
+    .introduce {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 1rem;
+      text-align: left;
+      position: relative;
+      height: 78%;
+      p {
+        margin: 0;
+      }
+
+      .thumbnail {
+        position: relative;
+        background-image: url(/src/assets/thumbnail1.png);
+        background-size: cover;
+        background-position: center;
+        border: none;
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+        }
+        &:hover::before {
+          content: "소개영상 보러가기";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: translate(-50%, -50%);
+          background-color: rgba($color: #b99494, $alpha: 0.5);
+        }
+      }
+      .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .gallery {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .pjtContent {
+    border-top: 1px solid black;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    .good {
+    }
+    .bad {
     }
   }
 }

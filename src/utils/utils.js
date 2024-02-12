@@ -1,3 +1,5 @@
+import style from "../styles/css/utils.module.css";
+
 export const goToSection = (top) => {
   // 현재 스크롤 위치
   const currentScroll = window.scrollY;
@@ -61,29 +63,24 @@ export const msgList = [
   [" ", "ㅇ", "아", "안", "안ㄴ", "안녀", "안녕"],
   [
     " ",
-    "ㅍ",
-    "프",
-    "프ㄹ",
-    "프로",
-    "프론",
-    "프론ㅌ",
-    "프론트",
-    "프론트ㅇ",
-    "프론트에",
-    "프론트엔",
-    "프론트엔ㄷ",
-    "프론트엔드",
-    "프론트엔드 ",
-    "프론트엔드 ㄱ",
-    "프론트엔드 개",
-    "프론트엔드 개ㅂ",
-    "프론트엔드 개바",
-    "프론트엔드 개발",
-    "프론트엔드 개발ㅈ",
-    "프론트엔드 개발자",
+    " F",
+    " FR",
+    " FRON",
+    " FRONT",
+    " FRONT ",
+    " FRONT D",
+    " FRONT DE",
+    " FRONT DEV",
+    " FRONT DEVEL",
+    " FRONT DEVELO",
+    " FRONT DEVELOP",
+    " FRONT DEVELOPE",
+    " FRONT DEVELOPER",
   ],
   ["", "ㄱ", "기", "김", "김ㅇ", "김우", "김웅", "김웅ㅅ", "김웅서"],
 ];
+
+export const msglist = ["FRONT DEVELOPER", "UNGSEO KIM"];
 
 export const myList = {
   front: [
@@ -207,12 +204,8 @@ export const myList = {
             도메인: 웹디자인, 서비스 명: 미:리뷰)`,
         },
         {
-          Date: "06.01 ~ 12.29",
-          Content: "삼성 청년 SW아카데미 2학기",
-        },
-        {
-          Date: "01.04 ~ 05.26",
-          Content: "삼성 청년 SW아카데미 1학기",
+          Date: "01.04 ~ 12.29",
+          Content: "삼성 청년 SW아카데미",
         },
       ],
     },
@@ -226,4 +219,29 @@ export const myList = {
       ],
     },
   ],
+};
+
+export const CycleEmoji = () => {
+  return <div className={style.container}></div>;
+};
+
+const useSkillsList = {
+  mereview: ["HTML & CSS", "React", "Typescript", "SCSS"],
+  hpdp: ["React", "Typescript", "SCSS", "BlockChain", "Web3", "SSE", "PWA"],
+  makeitlouder: ["Unity", "C#", "React", "Typescript", "Firebase"],
+};
+
+export const UseSkills = ({ pjtName }) => {
+  return (
+    <div className={style.skillContainer}>
+      <p className={style.title}>Use Skills</p>
+      <div className={style.skills}>
+        {useSkillsList[pjtName].map((skill, idx) => (
+          <div key={idx} className={style.skill}>
+            {skill}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };

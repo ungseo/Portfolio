@@ -1,0 +1,49 @@
+@import "Styles", "Animation";
+
+.container {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background-color: blue;
+    transform: translateY(-50%) translateX(-50%);
+    transform-origin: center; /* 중심축을 가운데로 설정 */
+    animation: rotateBar 1s linear infinite; /* 회전 애니메이션 적용 */
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background-color: rgb(114, 114, 187);
+    transform: translateY(-50%) translateX(-50%);
+    transform-origin: center;
+    animation: rotateBar 0.5s linear infinite 0.1s;
+  }
+}
+
+.skillContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  .title {
+  }
+  .skills {
+    display: flex;
+    gap: 0.5rem;
+    .skill {
+      padding: 2px;
+      border: 1px solid gray;
+      border-radius: 2px;
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -7,33 +7,42 @@
   position: relative;
   z-index: 2;
   margin: 0 20%;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+  }
 }
 #section1 {
   height: 100vh;
   background-color: transparent;
-
+  @media (max-width: 768px) {
+  }
   .contentWrapper {
     height: calc(100vh * 0.925);
     padding-top: calc(100vh * 0.075);
+    position: relative;
+    @media (max-width: 768px) {
+      padding: calc(100vh * 0.075) 5% 0 5%;
+      min-height: 100vh;
+    }
     .content {
+      height: 100%;
       @media (min-width: 768px) {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        width: 100%;
-        height: 100%;
         gap: 2rem;
+        width: 100%;
       }
       @media (max-width: 768px) {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        height: 100%;
-        padding: 0 5%;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
       }
       .profile {
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         position: relative;
         border-radius: 2rem;
         background-color: $ContainerBGC;
@@ -41,13 +50,15 @@
         box-sizing: border-box;
         box-shadow: 0 0 0.5rem black;
         animation: HalfUp ease-in-out 0.3s;
+        text-align: start;
         @media (min-width: 768px) {
           height: 80%;
           margin: auto;
-          padding: 1rem;
+          padding: 3rem;
         }
         @media (max-width: 768px) {
           margin: auto;
+          padding: 5%;
         }
         .script {
           text-align: start;
@@ -57,7 +68,7 @@
           position: relative;
           font-size: 2rem;
           font-weight: bold;
-          margin: 0 auto 0 0;
+          // margin: 0 auto 0 0;
           span {
             position: relative;
             &:before {
@@ -67,8 +78,23 @@
               right: -5px;
               height: 2rem;
               width: 4px;
-              background-color: blue;
+              background-color: rgb(43, 43, 43);
               animation: blink 1s infinite alternate;
+            }
+          }
+        }
+        .infoWrapper {
+          margin: auto 0;
+          .info {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            text-align: start;
+            span {
+              font-weight: 500;
+              margin-bottom: 1rem;
             }
           }
         }
@@ -89,6 +115,7 @@
           margin: auto;
         }
         @media (max-width: 768px) {
+          height: 50%;
           width: 50%;
           margin: 5% 25%;
         }
@@ -208,28 +235,28 @@
 .none {
   opacity: 0;
 }
-@media (max-width: 768px) {
-  #section1,
-  #section2,
-  #section3,
-  #section4 {
-    width: 100%;
-    margin: 0;
-  }
-  #section1 {
-    height: calc(100vh * 0.925);
-    .content {
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr !important;
-      gap: 0 !important;
-      .photoWrapper {
-        height: 90% !important;
-        border-radius: 1rem !important;
-      }
-      .profile {
-        height: 90% !important;
-        border-radius: 1rem !important;
-      }
-    }
-  }
-}
+// @media (max-width: 768px) {
+//   #section1,
+//   #section2,
+//   #section3,
+//   #section4 {
+//     width: 100%;
+//     margin: 0;
+//   }
+//   #section1 {
+//     height: calc(100vh * 0.925);
+//     .content {
+//       grid-template-rows: 1fr 1fr;
+//       grid-template-columns: 1fr !important;
+//       gap: 0 !important;
+//       .photoWrapper {
+//         height: 90% !important;
+//         border-radius: 1rem !important;
+//       }
+//       .profile {
+//         height: 90% !important;
+//         border-radius: 1rem !important;
+//       }
+//     }
+//   }
+// }

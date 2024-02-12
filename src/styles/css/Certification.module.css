@@ -92,6 +92,14 @@
     border-right-color: red;
   }
 }
+@keyframes rotateBar {
+  0% {
+    transform: translateY(-50%) translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-50%) rotate(360deg);
+  }
+}
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
