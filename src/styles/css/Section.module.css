@@ -311,8 +311,8 @@
   border-radius: 1rem;
   background-color: rgba(237, 244, 255, 0.368627451);
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   padding: 2.5rem;
 }
 @media (max-width: 768px) {
@@ -353,11 +353,74 @@
   }
 }
 #section4 .contentWrapper .content {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   width: 100%;
   height: 80%;
   border: 2px solid black;
   border-radius: 1rem;
   background-color: rgba(237, 244, 255, 0.368627451);
+}
+#section4 .contentWrapper .content .contactWrapper {
+  display: grid;
+  grid-template: 1fr/1fr 1.5fr;
+  justify-content: center;
+}
+#section4 .contentWrapper .content .contactWrapper .contact {
+  padding: 0 20%;
+}
+#section4 .contentWrapper .content .contactWrapper .guestbook {
+  padding: 0 20%;
+}
+#section4 .contentWrapper .content .contactWrapper .guestbook .guestform {
+  display: flex;
+  flex-direction: column;
+}
+#section4 .contentWrapper .content .contactWrapper .guestbook .guestform .info {
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+}
+#section4 .contentWrapper .content .contactWrapper .guestbook .guestform .info input {
+  width: 95%;
+}
+#section4 .contentWrapper .content .contactWrapper .guestbook .guestform .areaWrapper {
+  position: relative;
+}
+#section4 .contentWrapper .content .contactWrapper .guestbook .guestform .areaWrapper textarea {
+  width: calc(100% - 4px);
+  background-color: rgba(237, 244, 255, 0.368627451);
+}
+#section4 .contentWrapper .content .contactWrapper .guestbook .guestform .areaWrapper .byte {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.397);
+}
+#section4 .contentWrapper .content .list {
+  border-top: 1px solid black;
+  border-radius: 1rem;
+  overflow-y: auto;
+  padding: 1rem;
+}
+#section4 .contentWrapper .content .list .comment {
+  background-color: rgba(99, 99, 173, 0.425);
+  box-sizing: content-box;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  border: 1px solid black;
+}
+#section4 .contentWrapper .content .list .comment .commentTop {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#section4 .contentWrapper .content .list .comment .commentTop p {
+  margin: 0;
+}
+#section4 .contentWrapper .content .list .comment p {
+  text-align: left;
 }
 
 .none {

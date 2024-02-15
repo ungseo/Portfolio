@@ -13,6 +13,7 @@ const Section2 = forwardRef(({ endAnimation }, ref) => {
     setClicked(str);
     console.log(clicked);
   };
+
   return (
     <div id={style.section2} ref={ref}>
       <div className={`${endAnimation ? style.contentWrapper : style.none}`}>

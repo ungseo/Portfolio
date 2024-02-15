@@ -10,7 +10,7 @@ const Projects = ({ pjtNo }) => {
     window.open("https://www.youtube.com/watch?v=CWNNi3J2pJY", "_blank");
     // 위 URL은 실제 YouTube 동영상의 링크로 교체합니다.
   };
-  if (pjtNo == "first") {
+  if (pjtNo === "first") {
     return (
       <div className={style.container}>
         <div className={style.top}>
@@ -55,7 +55,7 @@ const Projects = ({ pjtNo }) => {
         </div>
       </div>
     );
-  } else if (pjtNo == "second") {
+  } else if (pjtNo === "second") {
     return (
       <div className={style.container}>
         <div className={style.top}>
@@ -104,7 +104,7 @@ const Projects = ({ pjtNo }) => {
         </div>
       </div>
     );
-  } else if (pjtNo == "third") {
+  } else if (pjtNo === "third") {
     return (
       <div className={style.container}>
         <div className={style.top}>
@@ -151,7 +151,7 @@ const Projects = ({ pjtNo }) => {
         </div>
       </div>
     );
-  } else if (pjtNo == "fourth") {
+  } else if (pjtNo === "fourth") {
     return (
       <div className={style.container}>
         <div className={style.title}>

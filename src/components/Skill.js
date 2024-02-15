@@ -3,7 +3,7 @@ import { getRatingStars } from "../utils/utils";
 const Skill = ({ name, rating, discription, img }) => {
   const stars = getRatingStars(rating);
   const images = require.context("../assets/", true);
-
+  console.log(name, rating, discription);
   return (
     <div className={style.container}>
       <div className={style.top}>
@@ -19,7 +19,9 @@ const Skill = ({ name, rating, discription, img }) => {
         </div>
         <div className={style.line}></div>
       </div>
-      <p className={style.discription}>{discription}</p>
+      {discription.map((des, idx) => (
+        <li key={idx}>{des}</li>
+      ))}
     </div>
   );
 };

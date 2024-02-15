@@ -1,17 +1,23 @@
 import style from "../styles/css/Certification.module.css";
 
 const Certification = ({ name, number, date, organization, img }) => {
+  console.log(name, img);
+  const images = require.context("../assets/", true);
   return (
     <div className={style.container}>
-      <div className={style.left}>
-        <div className={style.img} style={{ backgroundImage: `${""}` }}></div>
-      </div>
-      <div className={style.right}>
-        <p className={style.name}>{name}</p>
-        <p className={style.number}>{number}</p>
-        <p className={style.number}>{date}</p>
-        <p className={style.organization}>{organization}</p>
-      </div>
+      <p className={style.name}>{name}</p>
+      <p className={style.number}>
+        <span>번호/점수 : </span>
+        {number}
+      </p>
+      <p className={style.number}>
+        <span>취득일 : </span>
+        {date}
+      </p>
+      <p className={style.organization}>
+        <span>발행처 : </span>
+        {organization}
+      </p>
     </div>
   );
 };

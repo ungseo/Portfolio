@@ -3,7 +3,7 @@ import style from "../styles/css/SkillList.module.css";
 import { myList } from "../utils/utils";
 import Skill from "./Skill";
 
-const SkillList = ({ category }) => {
+const SkillList = ({ category, images }) => {
   const [lst, setLst] = useState(myList[category]);
   useEffect(() => {
     setLst(myList[category]);

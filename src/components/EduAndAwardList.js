@@ -7,14 +7,14 @@ const EduAndAwardList = () => {
   return (
     <div className={style.container}>
       {list.map((val, idx) => (
-        <div className={style.contentWrapper}>
+        <div key={idx} className={style.contentWrapper}>
           {val[Object.keys(val)].map((data, idx) => (
             <EduAndAward
               key={idx}
               year={Object.keys(val)}
               date={data.Date}
               content={data.Content}
-              first={idx == 0 ? true : false}
+              first={idx === 0 ? true : false}
             />
           ))}
         </div>

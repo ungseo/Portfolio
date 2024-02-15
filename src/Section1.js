@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import style from "./styles/css/Section.module.css";
-import { CycleEmoji, msgList, msglist } from "./utils/utils";
+import { CycleEmoji, msglist } from "./utils/utils";
 import CustomCursor from "./components/CustomCursor";
 const Section1 = forwardRef(({ endAnimation }, ref) => {
   const [tilt, setTilt] = useState({ tiltX: 0, tiltY: 0 });

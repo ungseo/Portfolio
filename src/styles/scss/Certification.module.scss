@@ -1,37 +1,40 @@
 @import "Styles", "Animation";
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-direction: column;
   position: relative;
   border: 2px solid lightblue;
   border-radius: 10px;
   padding: 1rem;
   transform-style: preserve-3d;
   transition: scale 0.2s ease, box-shadow 0.2s ease;
-  .left {
-    border: 2px solid blue;
-  }
-  .right {
-    display: grid;
-    grid-template-rows: auto;
+  overflow: hidden;
 
-    p {
-      margin: 0.5rem;
-    }
+  p {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0.5rem;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .name {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  span {
+    font-weight: bold;
+    text-align: left;
   }
   &::before {
     content: "";
-    background-image: url("/public/card.jpg");
-    background-size: cover;
     position: absolute;
     top: 50%;
     left: 50%;
-    // transform: translateX(-50%) translateY(-50%);
     width: 0;
     height: 0;
-    transition: height 0s ease, width 0.5s ease;
-    transform: translate3d(-50%, -50%, -1em);
+    transform: translate3d(-50%, -50%, 0em) rotate(45deg);
     z-index: 2;
   }
   &:hover {
@@ -39,7 +42,9 @@
     scale: 1.02;
   }
   &:hover::before {
-    height: 100%;
-    width: 100%;
+    transition: height 0s ease, width 0.5s ease;
+    height: 200%;
+    width: 200%;
+    background-color: rgba(134, 140, 212, 0.349);
   }
 }

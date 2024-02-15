@@ -94,5 +94,11 @@
   left: 0;
   right: 0;
 }
+.container li {
+  list-style: none;
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 0.8rem;
+}
 
 /*# sourceMappingURL=Skills.module.css.map */

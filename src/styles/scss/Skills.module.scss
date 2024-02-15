@@ -108,4 +108,10 @@ $borderColor: rgb(46, 76, 211);
       right: 0;
     }
   }
+  li {
+    list-style: none;
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 0.8rem;
+  }
 }
