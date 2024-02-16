@@ -419,8 +419,14 @@
 #section4 .contentWrapper .content .list .comment .commentTop p {
   margin: 0;
 }
+#section4 .contentWrapper .content .list .comment .commentTop .right {
+  display: flex;
+  gap: 1rem;
+}
 #section4 .contentWrapper .content .list .comment p {
   text-align: left;
+  word-wrap: break-word;
+  overflow-x: hidden;
 }
 
 .none {

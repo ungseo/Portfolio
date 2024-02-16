@@ -9,9 +9,8 @@ import SkillList from "./components/SkillList";
 import EduAndAwardList from "./components/EduAndAwardList";
 const Section2 = forwardRef(({ endAnimation }, ref) => {
   const [clicked, setClicked] = useState("language");
-  const Click = (str) => {
-    setClicked(str);
-    console.log(clicked);
+  const Click = (event) => {
+    setClicked(event.target.id);
   };
 
   return (

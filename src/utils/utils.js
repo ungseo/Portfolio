@@ -26,7 +26,6 @@ export const goToSection = (top) => {
   };
 
   // 부드러운 스크롤 적용
-  console.log(difference);
   smoothScroll(currentScroll, top, 100); // 100ms 동안 부드러운 스크롤 적용
 };
 
@@ -342,4 +341,12 @@ export const UseSkills = ({ pjtName }) => {
       </div>
     </div>
   );
+};
+
+export const formatDate = (date) => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
 };

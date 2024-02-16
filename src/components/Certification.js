@@ -1,8 +1,6 @@
 import style from "../styles/css/Certification.module.css";
 
-const Certification = ({ name, number, date, organization, img }) => {
-  console.log(name, img);
-  const images = require.context("../assets/", true);
+const Certification = ({ name, number, date, organization }) => {
   return (
     <div className={style.container}>
       <p className={style.name}>{name}</p>

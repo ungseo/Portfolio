@@ -7,7 +7,6 @@ const Background = ({ endAnimation, setEndAnimation }) => {
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
   const [screen, setScreen] = useState({ screenWidth, screenHeight });
-  console.log(screenWidth, screenHeight);
   // const handleEndAnimation = useCallback(() => {
   //   setEndAnimation(true);
   // }, [setEndAnimation]);

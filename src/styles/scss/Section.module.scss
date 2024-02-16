@@ -286,9 +286,15 @@
             p {
               margin: 0;
             }
+            .right {
+              display: flex;
+              gap: 1rem;
+            }
           }
           p {
             text-align: left;
+            word-wrap: break-word;
+            overflow-x: hidden;
           }
         }
       }
