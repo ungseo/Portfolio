@@ -24,11 +24,18 @@ const CustomCursor = ({ clicked }) => {
               transition: "top 0.3s ease, left 0.3s ease",
             }
           : {
-              left: `calc(${position.x}px - 20vw + 3px)`,
-              top: `calc(${position.y}px - 20vh + 30px )`,
+              left: `calc(${position.x - 20}px - 20vw)`,
+              top: `calc(${position.y - 20}px - 20vh )`,
             }
       }
-    ></div>
+    >
+      <p
+        className={style.noti}
+        style={{ visibility: clicked ? "hidden" : "visible" }}
+      >
+        Click!
+      </p>
+    </div>
   );
 };
 

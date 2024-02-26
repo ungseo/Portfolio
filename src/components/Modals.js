@@ -30,15 +30,17 @@ const Modals = ({ setModalOpen, data, modalOpen, getDB }) => {
   };
 
   return (
-    <div
-      className={style.container}
-      style={{ visibility: `${modalOpen ? "visible" : "hidden"}` }}
-    >
-      <h3>비밀번호를 입력해주세요.</h3>
-      <input type="password" value={inputPW} onChange={inputHandler} />
-      <div>
-        <Buttons text={"확인"} onClick={handleSubmit} />
-        <Buttons text={"취소"} onClick={closeModal} />
+    <div>
+      <div
+        className={style.container}
+        style={{ visibility: `${modalOpen ? "visible" : "hidden"}` }}
+      >
+        <h3>비밀번호를 입력해주세요.</h3>
+        <input type="password" value={inputPW} onChange={inputHandler} />
+        <div>
+          <Buttons text={"확인"} onClick={handleSubmit} />
+          <Buttons type="cancle" text={"취소"} onClick={closeModal} />
+        </div>
       </div>
     </div>
   );

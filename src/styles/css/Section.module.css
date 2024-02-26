@@ -120,36 +120,39 @@
 }
 
 #section1 {
-  height: 100vh;
+  height: auto;
   background-color: transparent;
 }
 #section1 .contentWrapper {
-  height: 92.5vh;
-  padding-top: 7.5vh;
   position: relative;
+  padding-top: 7.5vh;
+  min-height: 92.5vh;
 }
 @media (max-width: 768px) {
   #section1 .contentWrapper {
-    padding: 7.5vh 5% 0 5%;
     min-height: 100vh;
+    padding: 10vh 5% 0 5%;
+    box-sizing: border-box;
   }
-}
-#section1 .contentWrapper .content {
-  height: 100%;
 }
 @media (min-width: 768px) {
   #section1 .contentWrapper .content {
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
     width: 100%;
+    min-height: 92.5vh;
+    padding: 10% 0;
   }
 }
 @media (max-width: 768px) {
   #section1 .contentWrapper .content {
-    display: flex;
+    min-height: 90vh;
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
     width: 100%;
-    flex-direction: column;
+    height: 100%;
   }
 }
 #section1 .contentWrapper .content .profile {
@@ -168,7 +171,7 @@
 }
 @media (min-width: 768px) {
   #section1 .contentWrapper .content .profile {
-    height: 80%;
+    min-height: 100%;
     margin: auto;
     padding: 3rem;
   }
@@ -206,7 +209,6 @@
 }
 #section1 .contentWrapper .content .profile .infoWrapper .info {
   width: 100%;
-  height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -218,7 +220,6 @@
 }
 #section1 .contentWrapper .content .photoWrapper {
   width: 100%;
-  height: 80%;
   position: relative;
   background-color: rgba(237, 244, 255, 0.368627451);
   border-radius: 2rem;
@@ -228,16 +229,10 @@
   box-shadow: 0 0 0.5rem black;
   cursor: none;
 }
-@media (min-width: 768px) {
-  #section1 .contentWrapper .content .photoWrapper {
-    margin: auto;
-  }
-}
 @media (max-width: 768px) {
   #section1 .contentWrapper .content .photoWrapper {
-    height: 50%;
     width: 50%;
-    margin: 5% 25%;
+    margin: 0 auto;
   }
 }
 #section1 .contentWrapper .content .photoWrapper .icon {
@@ -246,9 +241,22 @@
   background-image: url(/public/profile.png);
   background-size: cover;
   position: absolute;
+  border-radius: 1.2rem;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+#section1 .contentWrapper .content .photoWrapper .icon::before {
+  content: "Hover!";
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: absolute;
+  top: calc(50% + 45px);
+  left: 50%;
+  padding: 2px;
+  border: 2px solid black;
+  border-radius: 1rem;
+  transform: translate(-50%, -50%);
 }
 #section1 .contentWrapper .content .photoWrapper .photo {
   width: 100%;
@@ -283,7 +291,7 @@
 }
 @media (max-width: 768px) {
   #section2 .contentWrapper {
-    padding: 7.5vh 5%;
+    padding: 7.5vh 5% 0 5%;
   }
 }
 #section2 .contentWrapper .skillWrapper {
@@ -335,7 +343,7 @@
 }
 @media (max-width: 768px) {
   #section3 .contentWrapper {
-    padding: 1rem;
+    padding: 7.5vh 5% 0 5%;
   }
 }
 
@@ -349,13 +357,12 @@
 }
 @media (max-width: 768px) {
   #section4 .contentWrapper {
-    padding: 1rem;
+    padding: 7.5vh 5% 0 5%;
   }
 }
 #section4 .contentWrapper .content {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  width: 100%;
   height: 80%;
   border: 2px solid black;
   border-radius: 1rem;
@@ -363,32 +370,48 @@
 }
 #section4 .contentWrapper .content .contactWrapper {
   display: grid;
-  grid-template: 1fr/1fr 1.5fr;
-  justify-content: center;
+  grid-template-columns: 1fr 1.5fr;
 }
 #section4 .contentWrapper .content .contactWrapper .contact {
   padding: 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+}
+#section4 .contentWrapper .content .contactWrapper .contact p {
+  margin: 0;
 }
 #section4 .contentWrapper .content .contactWrapper .guestbook {
+  position: relative;
   padding: 0 20%;
 }
 #section4 .contentWrapper .content .contactWrapper .guestbook .guestform {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 #section4 .contentWrapper .content .contactWrapper .guestbook .guestform .info {
   display: grid;
-  grid-template: 1fr/1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1px;
 }
 #section4 .contentWrapper .content .contactWrapper .guestbook .guestform .info input {
-  width: 95%;
+  width: calc(100% - 8px);
+  background-color: #cfdef5;
+  border: 1px solid #4659ad;
+  border-radius: 5px;
 }
 #section4 .contentWrapper .content .contactWrapper .guestbook .guestform .areaWrapper {
   position: relative;
+  width: 100%;
 }
 #section4 .contentWrapper .content .contactWrapper .guestbook .guestform .areaWrapper textarea {
-  width: calc(100% - 4px);
-  background-color: rgba(237, 244, 255, 0.368627451);
+  background-color: #cfdef5;
+  border: 1px solid #4659ad;
+  width: calc(100% - 6px);
+  resize: none;
+  border-radius: 5px;
 }
 #section4 .contentWrapper .content .contactWrapper .guestbook .guestform .areaWrapper .byte {
   position: absolute;
@@ -396,25 +419,30 @@
   right: 20px;
   font-size: 0.8rem;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.397);
+  background-color: rgb(220, 227, 241);
 }
 #section4 .contentWrapper .content .list {
   border-top: 1px solid black;
   border-radius: 1rem;
   overflow-y: auto;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 #section4 .contentWrapper .content .list .comment {
-  background-color: rgba(147, 187, 233, 0.425);
+  background-color: #cfdef5;
   box-sizing: content-box;
   border-radius: 1rem;
-  padding: 0 1rem;
-  border: 1px solid black;
+  padding: 0 0.2rem 0 1rem;
+  border: 1px solid #4659ad;
 }
 #section4 .contentWrapper .content .list .comment .commentTop {
   margin: 0;
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
 }
 #section4 .contentWrapper .content .list .comment .commentTop p {
   margin: 0;
@@ -423,10 +451,15 @@
   display: flex;
   gap: 1rem;
 }
-#section4 .contentWrapper .content .list .comment p {
+#section4 .contentWrapper .content .list .comment .commentTop .right button {
+  border-radius: 10px;
+}
+#section4 .contentWrapper .content .list .comment .commentBottom {
   text-align: left;
   word-wrap: break-word;
   overflow-x: hidden;
+  margin: auto;
+  font-size: 0.9rem;
 }
 
 .none {

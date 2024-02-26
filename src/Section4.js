@@ -89,11 +89,8 @@ const Section4 = forwardRef(({ endAnimation }, ref) => {
             <div className={style.contact}>
               <h1>Contact</h1>
               <a href="https://github.com/ungseo">Git hub</a>
-              <br />
               <a href="">Notion</a>
-              <br />
               <a href="">Blog</a>
-              <br />
               <p>email: ungseo@gmail.com</p>
               <p>phone number: +82-010-9402-3393</p>
             </div>
@@ -119,7 +116,6 @@ const Section4 = forwardRef(({ endAnimation }, ref) => {
                 <div className={style.areaWrapper}>
                   <textarea
                     id="content"
-                    cols="30"
                     rows="10"
                     placeholder="내용을 입력해주세요. (최대 300자)"
                     value={guestbook.content}
@@ -143,12 +139,17 @@ const Section4 = forwardRef(({ endAnimation }, ref) => {
                   <p>작성자 : {cmt[Object.keys(cmt)]["name"]}</p>
                   <div className={style.right}>
                     <p>{cmt[Object.keys(cmt)]["date"]}</p>
-                    <button onClick={handleModal} id={Object.keys(cmt)}>
-                      삭제
-                    </button>
+                    <Buttons
+                      type="Xbtn"
+                      text="X"
+                      onClick={handleModal}
+                      id={Object.keys(cmt)}
+                    />
                   </div>
                 </div>
-                <p>{cmt[Object.keys(cmt)]["content"]}</p>
+                <p className={style.commentBottom}>
+                  {cmt[Object.keys(cmt)]["content"]}
+                </p>
 
                 <Modals
                   setModalOpen={setModalOpen}

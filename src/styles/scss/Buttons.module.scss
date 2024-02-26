@@ -4,9 +4,9 @@
   position: relative;
   min-width: 70px;
   min-height: 2rem;
-  cursor: pointer;
   background: $bgc;
   border: 2px solid $bd;
+  cursor: pointer;
   border-radius: 0.75em;
   transform-style: preserve-3d;
   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
@@ -49,6 +49,105 @@
     transform: translate(0em, 0.5em);
     &::before {
       box-shadow: 0 0 0px 2px $bd, 0 0 $sdw;
+      transform: translate3d(0, 0em, -1em);
+    }
+  }
+}
+.cancle {
+  position: relative;
+  min-width: 70px;
+  min-height: 2rem;
+  background: $rbgc;
+  border: 2px solid $rbd;
+  cursor: pointer;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    background 150ms cubic-bezier(0, 0, 0.58, 1);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $rbbgc;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px $rbd, 0 0.625em 0 0 $rsdw;
+    transform: translate3d(0, 0.5em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+      box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+  &:hover {
+    background-color: $rhbgc;
+    transform: translate(0, 0.2em);
+    &::before {
+      box-shadow: 0 0 0 2px $rbd, 0 0.5em 0 0 $rsdw;
+      transform: translate3d(0, 0.3em, -1em);
+    }
+  }
+  &:focus {
+    border: 2px solid $rbd;
+    background-color: $rhbgc;
+    transform: translate(0, 0.2em);
+    &::before {
+      box-shadow: 0 0 0 2px $rbd, 0 0.5em 0 0 $rsdw;
+      transform: translate3d(0, 0.3em, -1em);
+    }
+  }
+  &:active {
+    background-color: $rabgc;
+    transform: translate(0em, 0.5em);
+    &::before {
+      box-shadow: 0 0 0px 2px $rbd, 0 0 $rsdw;
+      transform: translate3d(0, 0em, -1em);
+    }
+  }
+}
+.Xbtn {
+  position: relative;
+  cursor: pointer;
+  border-radius: 1em;
+  background: $rbgc;
+  border: 1px solid $rbd;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    background 150ms cubic-bezier(0, 0, 0.58, 1);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $rbbgc;
+    border-radius: inherit;
+    box-shadow: 0 0 0 1px $rbd, 0 0.3rem 0 0 $rsdw;
+    transform: translate3d(0, 0.3em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+      box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+  &:hover {
+    background-color: $rhbgc;
+    transform: translate(0, 0.1em);
+    &::before {
+      box-shadow: 0 0 0 1px $rbd, 0 0.3em 0 0 $rsdw;
+      transform: translate3d(0, 0.2em, -1em);
+    }
+  }
+  &:focus {
+    border: 1px solid $rbd;
+    background-color: $rhbgc;
+  }
+  &:active {
+    background-color: $rabgc;
+    transform: translate(0em, 0.3em);
+    &::before {
+      box-shadow: 0 0 0px 1px $rbd, 0 0 $rsdw;
       transform: translate3d(0, 0em, -1em);
     }
   }

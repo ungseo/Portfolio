@@ -103,7 +103,8 @@
 .container {
   width: 300px;
   height: 200px;
-  background-color: #adadad !important;
+  background-color: #f8a60e;
+  border: solid 1px black;
   position: fixed;
   top: 50%;
   left: 50%;
