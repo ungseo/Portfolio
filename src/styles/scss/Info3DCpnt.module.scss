@@ -1,63 +1,82 @@
 .container {
-  perspective: 1920px;
-  perspective-origin: 50% 0px;
-  width: 100%;
-  height: 70%;
-  color: black;
+  min-height: calc(69.375vh - 1.5em);
   text-align: center;
   position: relative;
-  input {
-    display: none;
-  }
-  .tab {
-    position: absolute;
-    width: 10%;
-    height: 28%;
-    background: pink;
-    right: 0;
-    line-height: 70px;
-    font-weight: 300;
-    z-index: 20;
-    border-radius: 2rem;
-    border: 1px solid black;
-    @media (max-width: 768px) {
-      border-radius: 1.5rem;
-    }
-    &:nth-child(1) {
-      top: 0;
-      background: #f1f6ff;
-    }
-    &:nth-child(2) {
-      top: 30%;
-      background: #ebf5fd;
-    }
-    &:nth-child(3) {
-      top: 60%;
-      background: #b0c7f8;
-    }
-    &:nth-child(4) {
-      top: 90%;
-      background: #6aa2c7;
-    }
-  }
-  .cube {
+  display: grid;
+  grid-template: 1fr/ 88% 10%;
+  gap: 2%;
+  .left {
+    width: 100%;
+    perspective: 1920px;
+    perspective-origin: 50% 0%;
     position: relative;
-    width: 75%;
-    height: 100%;
-    margin-left: 7.7%;
-    transform-origin: 0% 50%;
+  }
+  .right {
+    display: grid;
+    grid-template-rows: auto;
+    max-width: 100%;
+    overflow: hidden;
+    input {
+      display: none;
+    }
+    .tab {
+      display: inline-block;
+      right: 0;
+      line-height: 70px;
+      font-weight: 300;
+      z-index: 20;
+      border-radius: 2rem;
+      border: 1px solid black;
+      @media (max-width: 768px) {
+        border-radius: 1.5rem;
+      }
+      &:nth-child(1) {
+        background: #f1f6ff;
+      }
+      &:nth-child(2) {
+        background: #ebf5fd;
+      }
+      &:nth-child(3) {
+        background: #b0c7f8;
+      }
+      &:nth-child(4) {
+        background: #6aa2c7;
+      }
+    }
+  }
+
+  .cube {
+    position: absolute;
+    width: 85.6%;
+    min-height: 85.6%;
+    height: auto;
+    left: 6.9%;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in;
+    border: 1px solid transparent;
     .content {
       position: absolute;
       width: 100%;
       height: 100%;
-      position: absolute;
-      border-radius: 2rem;
-      border: 1px solid black;
-
+      border-radius: 1rem;
+      overflow-x: auto;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 50px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, #92b8ff, #b9e9ff);
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(45deg, #29b6f6, #039be5);
+      }
       h1 {
-        font-size: 2rem;
         font-weight: 300;
       }
       p {
@@ -69,7 +88,6 @@
         background-color: #f1f6ff;
       }
       &:nth-child(2) {
-        transform: translateZ(295px);
         background-color: #ebf5fd;
       }
       &:nth-child(3) {
@@ -78,7 +96,6 @@
         background-color: #b0c7f8;
       }
       &:nth-child(4) {
-        transform: rotateX(180deg) translateY(100%) translateZ(295px);
         transform-origin: bottom center;
         background-color: #6aa2c7;
       }
@@ -86,17 +103,17 @@
   }
 }
 
-#tabtop:checked ~ .cube {
+.rotateTop {
   transform: rotateX(-90deg);
 }
 
-#tabfront:checked ~ .cube {
+.rotateFront {
   transform: rotateX(0deg);
 }
 
-#tabbottom:checked ~ .cube {
+.rotateBottom {
   transform: rotateX(90deg);
 }
-#tablast:checked ~ .cube {
+.rotateLast {
   transform: rotateX(180deg);
 }

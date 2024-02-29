@@ -143,6 +143,7 @@
     gap: 2rem;
     width: 100%;
     min-height: 92.5vh;
+    height: 100%;
     padding: 10% 0;
   }
 }
@@ -336,9 +337,10 @@
 
 #section3 {
   position: relative;
+  height: auto;
 }
 #section3 .contentWrapper {
-  height: 92.5vh;
+  min-height: 92.5vh;
   padding-top: 7.5vh;
 }
 @media (max-width: 768px) {
@@ -352,7 +354,7 @@
 }
 #section4 .contentWrapper {
   position: relative;
-  height: 92.5vh;
+  min-height: 92.5vh;
   padding-top: 7.5vh;
 }
 @media (max-width: 768px) {
@@ -363,7 +365,7 @@
 #section4 .contentWrapper .content {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  height: 80%;
+  min-height: 80%;
   border: 2px solid black;
   border-radius: 1rem;
   background-color: rgba(237, 244, 255, 0.368627451);
@@ -371,6 +373,7 @@
 #section4 .contentWrapper .content .contactWrapper {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+  height: auto;
 }
 #section4 .contentWrapper .content .contactWrapper .contact {
   padding: 0 20%;
@@ -390,6 +393,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 1rem;
 }
 #section4 .contentWrapper .content .contactWrapper .guestbook .guestform .info {
   display: grid;
