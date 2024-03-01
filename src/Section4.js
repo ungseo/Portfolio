@@ -11,6 +11,13 @@ const Section4 = forwardRef(({ endAnimation }, ref) => {
     ReadDB().then((res) => {
       const newList = [];
       res.forEach((comment) => newList.push({ [comment.id]: comment.data() }));
+
+      newList.sort((a, b) => {
+        const dateA = new Date(Object.values(a)[0].date);
+        const dateB = new Date(Object.values(b)[0].date);
+        return dateA - dateB;
+      });
+
       console.log(newList);
       setCommentList(newList);
     });
