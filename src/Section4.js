@@ -32,6 +32,7 @@ const Section4 = forwardRef(({ endAnimation }, ref) => {
     }
     if (data.name.includes("김웅서")) {
       alert("사칭하지 말아주세요!!!!!!");
+      return;
     }
     if (data.name === "") {
       alert("이름을 입력해주세요");
