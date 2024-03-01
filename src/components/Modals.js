@@ -23,6 +23,8 @@ const Modals = ({ setModalOpen, data, modalOpen, getDB }) => {
                 alert("삭제했습니다.");
               })
               .then(() => setModalOpen(false));
+          } else {
+            alert("비밀번호를 확인해주세요.");
           }
         }
       })
