@@ -14,6 +14,7 @@ const EduAndAwardList = () => {
               year={Object.keys(val)}
               date={data.Date}
               content={data.Content}
+              award={data.award}
               first={idx === 0 ? true : false}
             />
           ))}

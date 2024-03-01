@@ -39,7 +39,6 @@ const Section4 = forwardRef(({ endAnimation }, ref) => {
       alert("비밀번호를 입력해주세요");
       return;
     } else {
-      console.log(data);
       WriteDB(data)
         .then((res) => {
           console.log("DB저장성공");

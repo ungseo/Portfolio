@@ -1,10 +1,13 @@
+@charset "UTF-8";
 .container {
+  border: 2px solid black;
   min-height: calc(69.375vh - 1.5em);
   text-align: center;
   position: relative;
   display: grid;
   grid-template: 1fr/88% 10%;
   gap: 2%;
+  border-radius: 1rem;
 }
 .container .left {
   width: 100%;
@@ -14,38 +17,43 @@
 }
 .container .right {
   display: grid;
-  grid-template-rows: auto;
+  height: 100%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   max-width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .container .right input {
   display: none;
 }
 .container .right .tab {
-  display: inline-block;
+  height: calc(100% - 1px);
   right: 0;
-  line-height: 70px;
   font-weight: 300;
   z-index: 20;
-  border-radius: 2rem;
-  border: 1px solid black;
-}
-@media (max-width: 768px) {
-  .container .right .tab {
-    border-radius: 1.5rem;
-  }
+  border-radius: 1rem;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .container .right .tab:nth-child(1) {
   background: #f1f6ff;
 }
 .container .right .tab:nth-child(2) {
-  background: #ebf5fd;
+  background: #d4e1fa;
 }
 .container .right .tab:nth-child(3) {
-  background: #b0c7f8;
+  background: #b9cff8;
 }
 .container .right .tab:nth-child(4) {
-  background: #6aa2c7;
+  background: #90b4f8;
+}
+.container .right .tab:hover {
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.596); /* 내부 그림자 적용 */
 }
 .container .cube {
   position: absolute;
@@ -62,12 +70,11 @@
   width: 100%;
   height: 100%;
   border-radius: 1rem;
-  overflow-x: auto;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .container .cube .content::-webkit-scrollbar {
   width: 5px;
-  height: 50px;
 }
 .container .cube .content::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #92b8ff, #b9e9ff);
@@ -92,16 +99,16 @@
   background-color: #f1f6ff;
 }
 .container .cube .content:nth-child(2) {
-  background-color: #ebf5fd;
+  background-color: #d4e1fa;
 }
 .container .cube .content:nth-child(3) {
   transform: rotateX(-90deg) translateY(50%);
   transform-origin: bottom center;
-  background-color: #b0c7f8;
+  background-color: #b9cff8;
 }
 .container .cube .content:nth-child(4) {
   transform-origin: bottom center;
-  background-color: #6aa2c7;
+  background-color: #90b4f8;
 }
 
 .rotateTop {

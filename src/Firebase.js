@@ -32,7 +32,6 @@ const analytics = getAnalytics(app);
 
 export const WriteDB = async (data) => {
   try {
-    console.log(data);
     const docRef = await addDoc(collection(db, "GuestBook"), {
       name: data.name,
       content: data.content,
@@ -41,7 +40,6 @@ export const WriteDB = async (data) => {
     });
     console.log("Document written with ID: ", docRef.id);
   } catch (error) {
-    console.log(data);
     console.log(error);
   }
 };

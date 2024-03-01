@@ -289,15 +289,22 @@ export const myList = {
           Date: "10.10 ~ 11.24",
           Content: `자율 프로젝트
            (도메인: 게임, 서비스 명: Make It Louder!)`,
+          award: "🏆우수상 (2위) (삼성전자주식회사)",
         },
         {
           Date: "08.21 ~ 10.06",
           Content: `특화 프로젝트 
           (도메인: 핀테크, 서비스 명: 한푼두푼)`,
+          award: "🏆우수상(3위) (삼성전자주식회사)",
         },
         {
           Date: "07.02 ~ 08.17",
           Content: `공통 프로젝트 (
+            도메인: 웹디자인, 서비스 명: 미:리뷰)`,
+        },
+        {
+          Date: "06.02 ~ 06.17",
+          Content: `2인 프로젝트 (
             도메인: 웹디자인, 서비스 명: 미:리뷰)`,
         },
         {
@@ -324,21 +331,32 @@ export const CycleEmoji = () => {
 
 const useSkillsList = {
   mereview: ["HTML & CSS", "React", "Typescript", "SCSS"],
-  hpdp: ["React", "Typescript", "SCSS", "BlockChain", "Web3", "SSE", "PWA"],
+  hpdp: [
+    "HTML & CSS",
+    "React",
+    "Typescript",
+    "SCSS",
+    "BlockChain",
+    "Web3",
+    "SSE",
+    "PWA",
+  ],
   makeitlouder: ["Unity", "C#", "React", "Typescript", "Firebase"],
 };
 
 export const UseSkills = ({ pjtName }) => {
   return (
     <div className={style.skillContainer}>
-      <p className={style.title}>Use Skills</p>
-      <div className={style.skills}>
-        {useSkillsList[pjtName].map((skill, idx) => (
-          <div key={idx} className={style.skill}>
-            {skill}
-          </div>
-        ))}
-      </div>
+      <p className={style.title}>
+        Using Skills
+        <div className={style.skills}>
+          {useSkillsList[pjtName].map((skill, idx) => (
+            <div key={idx} className={style.skill}>
+              {skill}
+            </div>
+          ))}
+        </div>
+      </p>
     </div>
   );
 };

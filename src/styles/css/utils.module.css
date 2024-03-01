@@ -138,13 +138,15 @@
 }
 .skillContainer .skills {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 .skillContainer .skills .skill {
   padding: 2px;
-  border: 1px solid gray;
+  border: 1px solid black;
+  background-color: white;
   border-radius: 2px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 /*# sourceMappingURL=utils.module.css.map */

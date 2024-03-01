@@ -8,7 +8,6 @@ const Info3DCpnt = () => {
   const getCubeClass = () => {
     switch (selectedTab) {
       case "tabtop":
-        console.log(`${style.cube} ${style.rotateTop}`);
         return `${style.cube} ${style.rotateTop}`;
       case "tabfront":
         return `${style.cube} ${style.rotateFront}`;
@@ -30,7 +29,6 @@ const Info3DCpnt = () => {
 
     return () => window.removeEventListener("resize", updateVh);
   }, []);
-  console.log(vh);
 
   return (
     <div className={style.container}>
@@ -63,47 +61,30 @@ const Info3DCpnt = () => {
           className={style.tab}
           htmlFor={style.tabtop}
           onClick={() => setSelectedTab("tabtop")}
-        ></label>
+        >
+          미리뷰
+        </label>
         <label
           className={style.tab}
           htmlFor={style.tabfront}
           onClick={() => setSelectedTab("tabfront")}
-        ></label>
+        >
+          한푼두푼
+        </label>
         <label
           className={style.tab}
           htmlFor={style.tabbottom}
           onClick={() => setSelectedTab("tabbottom")}
-        ></label>
+        >
+          Make It Louder!
+        </label>
         <label
           className={style.tab}
           htmlFor={style.tablast}
           onClick={() => setSelectedTab("tablast")}
-        ></label>
-        <input
-          type="radio"
-          name="tabs"
-          id="tabtop"
-          defaultChecked
-          onClick={() => setSelectedTab("tabtop")}
-        />
-        <input
-          type="radio"
-          name="tabs"
-          id="tabfront"
-          onClick={() => setSelectedTab("tabfront")}
-        />
-        <input
-          type="radio"
-          name="tabs"
-          id="tabbottom"
-          onClick={() => setSelectedTab("tabbottom")}
-        />
-        <input
-          type="radio"
-          name="tabs"
-          id="tablast"
-          onClick={() => setSelectedTab("tablast")}
-        />
+        >
+          포트폴리오
+        </label>
       </div>
     </div>
   );
