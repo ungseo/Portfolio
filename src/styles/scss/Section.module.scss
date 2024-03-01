@@ -234,15 +234,16 @@
   position: relative;
   .contentWrapper {
     position: relative;
-    min-height: 92.5vh;
-    padding-top: calc(100vh * 0.075);
+    height: 92.5vh;
+    padding-top: 7.5vh;
     @media (max-width: 768px) {
       padding: 7.5vh 5% 0 5%;
     }
     .content {
       display: grid;
       grid-template-rows: 1fr 1fr;
-      min-height: 80%;
+      height: 80%;
+      min-height: 700px;
       border: $section2Border;
       border-radius: $section2BR;
       background-color: $ContainerBGC;

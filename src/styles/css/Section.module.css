@@ -354,7 +354,7 @@
 }
 #section4 .contentWrapper {
   position: relative;
-  min-height: 92.5vh;
+  height: 92.5vh;
   padding-top: 7.5vh;
 }
 @media (max-width: 768px) {
@@ -365,7 +365,8 @@
 #section4 .contentWrapper .content {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  min-height: 80%;
+  height: 80%;
+  min-height: 700px;
   border: 2px solid black;
   border-radius: 1rem;
   background-color: rgba(237, 244, 255, 0.368627451);
