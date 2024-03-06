@@ -15,9 +15,5 @@
   box-sizing: border-box;
   padding: 1rem;
   gap: 1rem;
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
+  align-items: center;
 }

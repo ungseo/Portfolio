@@ -420,5 +420,20 @@ export const projectList = {
       "발표와 시연에 있어서 자신감을 가지고 몰입해서 좋은 결과를 냈던 점",
     ],
   },
-  portfolio: { things: [], goods: [] },
+  portfolio: {
+    things: [
+      "canvas 사용해서 눈내리는 3D배경화면 구현",
+      "Phenomenon 라이브러리 사용해서 처음 들어올 시 눈 흩뿌리는 이펙트 구현",
+      "utils.js 파일에 내 정보 구조화 하고 재사용 쉽게 가공하기",
+      "Firebase와 연결해 방명록 구현",
+      "perspective 속성 이용해서 3D Cube 컴포넌트 구현",
+      "각종 이펙트 자체구현",
+      "반응형 웹 구현",
+    ],
+    goods: [
+      "다크모드 구현해보기",
+      "방명록 댓글 삭제 Modal 디자인",
+      "SQLd 자격증 취득 후 추가",
+    ],
+  },
 };

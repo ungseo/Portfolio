@@ -252,7 +252,7 @@ const Projects = ({ pjtNo }) => {
                 <div className={style.descontent}>
                   개인 포트폴리오를 웹사이트 형식으로 제작하고 있습니다.
                   <br />
-                  여러가지 디자인들을 실험해보고 넣고싶은것들을 공부하면서
+                  여러가지 디자인들을 실험해보고 넣고 싶었던것들을 공부하면서
                   넣고있어요.
                 </div>
               </p>
@@ -270,15 +270,15 @@ const Projects = ({ pjtNo }) => {
           <div className={style.good}>
             <p>구현</p>
             <ul>
-              {pjtList["makeitlouder"]["things"].map((val, idx) => (
+              {pjtList["portfolio"]["things"].map((val, idx) => (
                 <li key={idx}>{val}</li>
               ))}
             </ul>
           </div>
           <div className={style.bad} onWheel={handleScroll}>
-            <p>잘한 점</p>
+            <p>추가예정</p>
             <ul>
-              {pjtList["makeitlouder"]["goods"].map((val, idx) => (
+              {pjtList["portfolio"]["goods"].map((val, idx) => (
                 <li key={idx}>{val}</li>
               ))}
             </ul>
