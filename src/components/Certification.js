@@ -5,16 +5,16 @@ const Certification = ({ name, number, date, organization }) => {
     <div className={style.container}>
       <p className={style.name}>{name}</p>
       <p className={style.number}>
-        <span>번호/점수 : </span>
-        {number}
+        <span className={style.a}>번호/점수 : </span>
+        <span className={style.b}>{number}</span>
       </p>
       <p className={style.number}>
-        <span>취득일 : </span>
-        {date}
+        <span className={style.a}>취득일 : </span>
+        <span className={style.b}>{date}</span>
       </p>
       <p className={style.organization}>
-        <span>발행처 : </span>
-        {organization}
+        <span className={style.a}>발행처 : </span>
+        <span className={style.b}>{organization}</span>
       </p>
     </div>
   );

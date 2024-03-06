@@ -204,7 +204,7 @@ export const myList = {
     },
     {
       Name: "Jira",
-      Rating: 4,
+      Rating: 3,
       Discription: [
         "- 에픽, 스토리, 작업을 생성하고 할당하며, 프로젝트의 진행 상황을 추적하는 데 익숙합니다.",
         "- Jira를 활용하여 스프린트 계획을 세우고 작업을 조직하는 등의 경험이 있습니다.",
@@ -213,7 +213,7 @@ export const myList = {
     },
     {
       Name: "Unity Version Control",
-      Rating: 4,
+      Rating: 3,
       Discription: [
         "- Unity에서 버전 관리 기능을 활용하여 게임 프로젝트의 코드와 에셋을 관리했습니다.",
         "- 다른 개발자들과의 작업을 동기화하는 데 능숙합니다.",
@@ -234,52 +234,45 @@ export const myList = {
   certifications: [
     {
       Name: "정보처리기사",
-      Date: "2023-09-06",
+      Date: "2023-09-01",
       Organization: "한국산업인력공단",
-      Number: "09-129302102",
-      Img: "coding.png",
+      Number: "23202060666J",
     },
     {
       Name: "Softeer HSAT level 3",
       Date: "2023-08-25",
       Organization: "현대엔지비",
-      Number: "09-129302102",
-      Img: "coding.png",
+      Number: "HSAT-23-02-3372",
     },
     {
-      Name: "삼성 모의 A형",
+      Name: "삼성 SW 역량테스트 모의 A형",
       Date: "2023-04-25",
       Organization: "삼성전자",
-      Number: "09-129302102",
-      Img: "coding.png",
+      Number: "N/A",
     },
     {
       Name: "TOEIC",
       Date: "2022-09-25",
       Organization: "ETS",
       Number: "910점",
-      Img: "coding.png",
     },
     {
       Name: "재경관리사",
       Date: "2022-08-05",
       Organization: "삼일회계법인",
       Number: "0-94-00094",
-      Img: "",
     },
     {
       Name: "컴퓨터활용능력1급",
       Date: "2019-03-15",
       Organization: "대한상공회의소",
       Number: "19-K9-021483",
-      Img: "coding.png",
     },
     {
       Name: "ERP회계정보관리사 2급",
       Date: "2018-06-12",
       Organization: "대한상공회의소",
-      Number: "19-K9-021483",
-      Img: "",
+      Number: "EAE2118103285810",
     },
   ],
   eduNawards: [
@@ -300,11 +293,6 @@ export const myList = {
         {
           Date: "07.02 ~ 08.17",
           Content: `공통 프로젝트 (
-            도메인: 웹디자인, 서비스 명: 미:리뷰)`,
-        },
-        {
-          Date: "06.02 ~ 06.17",
-          Content: `2인 프로젝트 (
             도메인: 웹디자인, 서비스 명: 미:리뷰)`,
         },
         {
@@ -342,6 +330,7 @@ const useSkillsList = {
     "PWA",
   ],
   makeitlouder: ["Unity", "C#", "React", "Typescript", "Firebase"],
+  portfolio: ["React", "Javascript", "SCSS", "Firebase"],
 };
 
 export const UseSkills = ({ pjtName }) => {
@@ -367,4 +356,69 @@ export const formatDate = (date) => {
   const day = String(date.getDate()).padStart(2, "0");
 
   return `${year}-${month}-${day}`;
+};
+
+export const projectList = {
+  mereview: {
+    things: [
+      "Auth 관련 기능 구현(회원가입, 로그인, 로그아웃 등)",
+      "회원가입시 이메일 인증기능 구현",
+      "리뷰 코멘트창 CRUD기능 구현",
+      "리뷰 디테일 페이지 구현",
+      "TMBD 외부 API 연결",
+      "사용자 관심사 등록기능 구현",
+      "로딩스피너, Navbar등 UI디자인 및 개발",
+      "업적 뱃지 디자인",
+    ],
+    goods: [
+      "Typescript 새롭게 학습",
+      "SCSS 새롭게 학습",
+      "Redux 및 Redux Slice를 이용해 중앙에서 상태를 관리한 것",
+      "디자인 라이브러리를 사용하기보다는 직접 CSS를 이용해 애니메이션 효과 등을 디자인한것",
+    ],
+  },
+
+  hpdp: {
+    things: [
+      "Auth 관련 기능 구현(회원가입, 로그인, 정보수정, 로그아웃 등)",
+      "interceptor와 RefreshToken을 이용해 AccessToken 재발급",
+      "펀딩 조회 기능 구현",
+      "기업 정보 조회 기능 구현",
+      "펀딩 및 기업 검색 기능 구현",
+      "모금액 정산하기 기능 구현",
+      "결과 보고서 등록 기능구현",
+      "계좌 비밀번호 입력시 랜덤으로 바뀌는 키패드 구현",
+      "Toss payments 라이브러리 이용해서 결제 기능구현",
+      "뉴스 조회 크롤링 기능구현",
+    ],
+    goods: [
+      "TS, Redux Slice 사용이 처음인 팀원들을 위해 샘플코드를 만들어서 팀원들의 개발을 도운점",
+      "Button, Input, Alert Modal 등 공통 컴포넌트를 재사용성있게 만들어서 팀원들과 공유해 개발시간을 단축한 점",
+      "Back-End와 통신을 위한 axios API요청 함수를 재사용하기 쉽게 직접 만들어 팀원들이 더 쉽게 개발 할 수 있도록 도운 점",
+      "스크롤링시 Navbar 숨기기, 버튼 위치 설정 등 UX를 고려한 디자인을 하려고 노력한 점",
+      "여러가지 CSS 애니메이션을 제작하여 단조로운 모바일 웹을 풍성하게 꾸민점",
+      "약 27개의 페이지와 100개 이상의 컴포넌트로 나눠 아토믹디자인중 분자 단계수준의 컴포넌트 구조로 수정과 재사용성에 있어 많은 이점을 가져간 점.",
+      "기획 단계에서 설정해 놓은 디자인 시스템(Style.scss)을 Scss 최상단에 만들고, 간단한 애니메이션을 적용할 수 있는 Animation.scss 파일을 만들어 팀원들이 쉽게 통일된 디자인으로 만들 수 있도록 공유한 점.",
+    ],
+  },
+  makeitlouder: {
+    things: [
+      "Intro Scene, Auth Scene 제작",
+      "Auth 관련 기능 구현(로그인, 회원가입)",
+      "인게임 옵션창 고정 UI제작 및 기능연결(볼륨 조절, 캐릭터 변경 등)",
+      "로비 Scene UI제작 및 기능연결",
+      "랭킹시스템 개발 및 UI제작",
+      "Firebase 이용해 Back-end 구현(유저, 랭킹, 플레이기록, 아바타 설정 등)",
+      "Firebse Functions를 이용해 매 6시간마다 랭킹을 자동 업데이트하는 스케쥴러기능 제작",
+      "React를 이용해 게임 웹페이지(다운로드, 패치노트) 개발",
+    ],
+    goods: [
+      "잘 할 수 있는 부분과 못하는 부분의 역할 분배를 잘한 점.(평소 FE개발에는 자신이 있었기 때문에 혼자 맡아서 빠른속도로 배포 페이지를 개발하였음)",
+      "로그인/회원가입 상황에서 모든 예외처리를 하고, LoadingSpinner 사용, Tab키를 이용한 포커스 전환 등 UX를 최대한 고려하여 개발하려고 노력한 점",
+      "중간에 Firebase(BE) 업무를 넘겨받았지만 포기하지않고 핵심기능을 모두 완성시킨점",
+      "베타테스트를 진행해 집중적으로 피드백을 수집하고, 개선작업을 실행한 점",
+      "발표와 시연에 있어서 자신감을 가지고 몰입해서 좋은 결과를 냈던 점",
+    ],
+  },
+  portfolio: { things: [], goods: [] },
 };

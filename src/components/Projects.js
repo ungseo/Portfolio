@@ -1,15 +1,27 @@
 import React from "react";
 import style from "../styles/css/Projects.module.css";
-import { UseSkills } from "../utils/utils";
+import { UseSkills, projectList } from "../utils/utils";
+import thumbnail1 from "../assets/thumbnail1.png";
+import thumbnail2 from "../assets/thumbnail2.png";
+import thumbnail3 from "../assets/thumbnail3.png";
+import nothumbnail from "../assets/no-video.png";
 
 const Projects = ({ pjtNo }) => {
   const handleScroll = (e) => {
     e.stopPropagation(); // 이벤트 전파 중지
   };
-  const handleButtonClick = () => {
-    window.open("https://www.youtube.com/watch?v=CWNNi3J2pJY", "_blank");
-    // 위 URL은 실제 YouTube 동영상의 링크로 교체합니다.
+  const handleButtonClick = (event) => {
+    const { id } = event.target;
+    if (id === "mereview") {
+      window.open("https://www.youtube.com/watch?v=CWNNi3J2pJY", "_blank");
+    } else if (id === "hpdp") {
+      window.open("https://www.youtube.com/watch?v=pNRrlDQ1Il0", "_blank");
+    } else if (id === "makeitlouder") {
+      window.open("https://www.youtube.com/watch?v=P1juS3GDWZk", "_blank");
+    } else {
+    }
   };
+  const pjtList = projectList;
   if (pjtNo === "first") {
     return (
       <div className={style.container}>
@@ -22,14 +34,12 @@ const Projects = ({ pjtNo }) => {
           </div>
           <div className={style.introduce}>
             <button
+              id="mereview"
               className={style.thumbnail}
               onClick={handleButtonClick}
+              style={{ backgroundImage: `url(${thumbnail1})` }}
             ></button>
             <div className={style.description}>
-              <p>
-                Role
-                <p className={style.title}>FE</p>
-              </p>
               <p>
                 Description
                 <div className={style.descontent}>
@@ -38,21 +48,43 @@ const Projects = ({ pjtNo }) => {
                   영화 리뷰 플랫폼 미:리뷰 입니다.
                 </div>
               </p>
+              <div className={style.middle}>
+                <div>
+                  Role
+                  <p className={style.title}>FE</p>
+                </div>
+                <div className={style.notion}>
+                  자세히보기
+                  <p>
+                    <a
+                      href="https://github.com/Mereview/Mereview"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Link
+                    </a>
+                  </p>
+                </div>
+              </div>
               <UseSkills pjtName="mereview" />
             </div>
           </div>
         </div>
         <div className={style.pjtContent}>
           <div className={style.good}>
-            <p>잘한점</p>
+            <p>구현</p>
             <ul>
-              <li></li>
+              {pjtList["mereview"]["things"].map((val, idx) => (
+                <li key={idx}>{val}</li>
+              ))}
             </ul>
           </div>
           <div className={style.bad} onWheel={handleScroll}>
-            <p>아쉬웠던 점</p>
+            <p>잘한 점</p>
             <ul>
-              <li></li>
+              {pjtList["mereview"]["goods"].map((val, idx) => (
+                <li key={idx}>{val}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -71,13 +103,10 @@ const Projects = ({ pjtNo }) => {
           <div className={style.introduce}>
             <button
               className={style.thumbnail}
+              style={{ backgroundImage: `url(${thumbnail2})` }}
               onClick={handleButtonClick}
             ></button>
             <div className={style.description}>
-              <p>
-                Role
-                <p className={style.title}>FR</p>
-              </p>
               <p>
                 Description <br />
                 <div className={style.descontent}>
@@ -87,21 +116,43 @@ const Projects = ({ pjtNo }) => {
                   관심을 가지는 기업과 프로젝트에 후원하세요.
                 </div>
               </p>
+              <div className={style.middle}>
+                <div>
+                  Role
+                  <p className={style.title}>FE</p>
+                </div>
+                <div className={style.notion}>
+                  자세히보기
+                  <p>
+                    <a
+                      href="https://github.com/ungseo/PTJ_HPDP"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Link
+                    </a>
+                  </p>
+                </div>
+              </div>
               <UseSkills pjtName="hpdp" />
             </div>
           </div>
         </div>
         <div className={style.pjtContent}>
           <div className={style.good}>
-            <p>잘한점</p>
+            <p>구현</p>
             <ul>
-              <li></li>
+              {pjtList["hpdp"]["things"].map((val, idx) => (
+                <li key={idx}>{val}</li>
+              ))}
             </ul>
           </div>
           <div className={style.bad} onWheel={handleScroll}>
-            <p>아쉬웠던 점</p>
+            <p>잘한 점</p>
             <ul>
-              <li></li>
+              {pjtList["hpdp"]["goods"].map((val, idx) => (
+                <li key={idx}>{val}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -120,13 +171,10 @@ const Projects = ({ pjtNo }) => {
           <div className={style.introduce}>
             <button
               className={style.thumbnail}
+              style={{ backgroundImage: `url(${thumbnail3})` }}
               onClick={handleButtonClick}
             ></button>
             <div className={style.description}>
-              <p>
-                Role
-                <p className={style.title}> UI/UX, FE, BE</p>
-              </p>
               <p>
                 Description <br />
                 <div className={style.descontent}>
@@ -135,21 +183,43 @@ const Projects = ({ pjtNo }) => {
                   조작을 이용한 지형지물 극복
                 </div>
               </p>
+              <div className={style.middle}>
+                <div>
+                  Role
+                  <p className={style.title}>FE</p>
+                </div>
+                <div className={style.notion}>
+                  자세히보기
+                  <p>
+                    <a
+                      href="https://ungseo.notion.site/Make-It-Louder-cb8874c2b2184f918b9761b4b162672e"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Link
+                    </a>
+                  </p>
+                </div>
+              </div>
               <UseSkills pjtName="makeitlouder" />
             </div>
           </div>
         </div>
         <div className={style.pjtContent}>
           <div className={style.good}>
-            <p>잘한점</p>
+            <p>구현</p>
             <ul>
-              <li></li>
+              {pjtList["makeitlouder"]["things"].map((val, idx) => (
+                <li key={idx}>{val}</li>
+              ))}
             </ul>
           </div>
           <div className={style.bad} onWheel={handleScroll}>
-            <p>아쉬웠던 점</p>
+            <p>잘한 점</p>
             <ul>
-              <li></li>
+              {pjtList["makeitlouder"]["goods"].map((val, idx) => (
+                <li key={idx}>{val}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -158,11 +228,61 @@ const Projects = ({ pjtNo }) => {
   } else if (pjtNo === "fourth") {
     return (
       <div className={style.container}>
-        <div className={style.title}>
-          <h2>
-            포트폴리오 제작 <span></span>
-          </h2>
-          <h3>진행기간: 2023.07.03 - 2023.08.21 (약 7주)</h3>
+        <div className={style.top}>
+          <div className={style.title}>
+            <h2>
+              Portfolio 제작<span>(Web Design)</span>
+            </h2>
+            <h3>진행기간: 2024.02.18 ~ ing</h3>
+          </div>
+          <div className={style.introduce}>
+            <button
+              id="portfolio"
+              style={{
+                backgroundImage: `url(${nothumbnail})`,
+                backgroundSize: "50px 50px",
+                backgroundRepeat: "no-repeat",
+              }}
+              className={style.thumbnail}
+              onClick={handleButtonClick}
+            ></button>
+            <div className={style.description}>
+              <p style={{ width: "100%" }}>
+                Description <br />
+                <div className={style.descontent}>
+                  개인 포트폴리오를 웹사이트 형식으로 제작하고 있습니다.
+                  <br />
+                  여러가지 디자인들을 실험해보고 넣고싶은것들을 공부하면서
+                  넣고있어요.
+                </div>
+              </p>
+              <div className={style.middle}>
+                <div>
+                  Role
+                  <p className={style.title}>FE</p>
+                </div>
+              </div>
+              <UseSkills pjtName="portfolio" />
+            </div>
+          </div>
+        </div>
+        <div className={style.pjtContent}>
+          <div className={style.good}>
+            <p>구현</p>
+            <ul>
+              {pjtList["makeitlouder"]["things"].map((val, idx) => (
+                <li key={idx}>{val}</li>
+              ))}
+            </ul>
+          </div>
+          <div className={style.bad} onWheel={handleScroll}>
+            <p>잘한 점</p>
+            <ul>
+              {pjtList["makeitlouder"]["goods"].map((val, idx) => (
+                <li key={idx}>{val}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     );

@@ -10,22 +10,27 @@
   transform-style: preserve-3d;
   transition: scale 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
+  justify-content: space-between;
 
   p {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin: 0.5rem;
     font-size: 0.8rem;
-    align-items: center;
+    justify-content: space-between;
   }
+
   .name {
     display: block;
     font-weight: bold;
     font-size: 1rem;
   }
-  span {
+  .a {
     font-weight: bold;
     text-align: left;
+  }
+  .b {
+    text-align: center;
   }
   &::before {
     content: "";
