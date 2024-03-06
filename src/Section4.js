@@ -99,9 +99,27 @@ const Section4 = forwardRef(({ endAnimation }, ref) => {
           <div className={style.contactWrapper}>
             <div className={style.contact}>
               <h1>Contact</h1>
-              <a href="https://github.com/ungseo">Git hub</a>
-              <a href="">Notion</a>
-              <a href="">Blog</a>
+              <a
+                href="https://github.com/ungseo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Git hub
+              </a>
+              <a
+                href="https://ungseo.notion.site/d9dba6b5f352408c94bc4f7f0c0eb8b7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Notion
+              </a>
+              <a
+                href="https://dev-get-jop.tistory.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blog
+              </a>
               <p>email: ungseo@gmail.com</p>
               <p>phone number: +82-010-9402-3393</p>
             </div>
