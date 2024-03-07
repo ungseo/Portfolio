@@ -18,7 +18,6 @@ const Section4 = forwardRef(({ endAnimation }, ref) => {
         return dateA - dateB;
       });
 
-      console.log(newList);
       setCommentList(newList);
     });
   };
@@ -90,7 +89,6 @@ const Section4 = forwardRef(({ endAnimation }, ref) => {
   useEffect(() => {
     getDB();
   }, []);
-  console.log(delData);
   return (
     <div id={style.section4} ref={ref}>
       <div className={`${endAnimation ? style.contentWrapper : style.none}`}>
