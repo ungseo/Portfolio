@@ -102,6 +102,7 @@ const Projects = ({ pjtNo }) => {
           </div>
           <div className={style.introduce}>
             <button
+              id="hpdp"
               className={style.thumbnail}
               style={{ backgroundImage: `url(${thumbnail2})` }}
               onClick={handleButtonClick}
@@ -170,6 +171,7 @@ const Projects = ({ pjtNo }) => {
           </div>
           <div className={style.introduce}>
             <button
+              id="makeitlouder"
               className={style.thumbnail}
               style={{ backgroundImage: `url(${thumbnail3})` }}
               onClick={handleButtonClick}
