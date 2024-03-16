@@ -58,6 +58,7 @@ const Section1 = forwardRef(({ endAnimation }, ref) => {
             style={{
               transform: `rotateX(${tilt.tiltY}deg) rotateY(${tilt.tiltX}deg)`,
               overflow: `${clicked ? "" : "hidden"}`,
+              cursor: `${clicked ? "pointer" : "none"}`,
             }}
             onClick={click}
           >

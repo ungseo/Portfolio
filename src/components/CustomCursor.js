@@ -31,7 +31,10 @@ const CustomCursor = ({ clicked }) => {
     >
       <p
         className={style.noti}
-        style={{ visibility: clicked ? "hidden" : "visible" }}
+        style={{
+          visibility: clicked ? "hidden" : "visible",
+          textAlign: "center",
+        }}
       >
         Click!
       </p>
