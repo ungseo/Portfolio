@@ -159,13 +159,23 @@ export const myList = {
     },
     {
       Name: "Java",
-      Rating: 1,
+      Rating: 2,
       Discription: ["- 간단한 알고리즘 문제를 해결할 수 있습니다."],
       Img: "java.png",
     },
   ],
 
   back: [
+    {
+      Name: "Linux",
+      Rating: 2,
+      Discription: [
+        "- 간단한 리눅스 명령어를 사용할 수 있습니다.",
+        "- 파일 시스템 탐색 및 기본적인 파일 조작이 가능합니다.",
+        "- 셸 스크립트를 작성하여 간단한 자동화 작업을 수행해본 경험이 있습니다.",
+      ],
+      Img: "linux.png",
+    },
     {
       Name: "Django",
       Rating: 2,
@@ -232,6 +242,12 @@ export const myList = {
     },
   ],
   certifications: [
+    {
+      Name: "SQLD",
+      Date: "2024-04-05",
+      Organization: "한국데이터산업진흥원",
+      Number: "SQLD-052018527",
+    },
     {
       Name: "정보처리기사",
       Date: "2023-09-01",

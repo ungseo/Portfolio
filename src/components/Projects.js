@@ -19,6 +19,7 @@ const Projects = ({ pjtNo }) => {
     } else if (id === "makeitlouder") {
       window.open("https://www.youtube.com/watch?v=P1juS3GDWZk", "_blank");
     } else {
+      alert("소개영상이 없습니다.");
     }
   };
   const pjtList = projectList;

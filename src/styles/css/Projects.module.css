@@ -151,8 +151,8 @@
   background-position: center;
   aspect-ratio: 16/9;
   border: none;
-  width: 100%;
   padding: 0;
+  max-width: 350px;
   cursor: pointer;
 }
 .container .top .introduce .thumbnail::before {
